@@ -1,22 +1,22 @@
 import React from "react";
-import cachetteNavigation from "./cachette-navigation";
 import { Flex, Box } from "rebass";
 import PropTypes from "prop-types";
 import Styled from "styled-components";
 import Calendar from "react-calendar/dist/entry.nostyle";
 import Dropdown, {
   DropdownTrigger,
-  DropdownContent,
+  DropdownContent
 } from "react-simple-dropdown";
 import "react-simple-dropdown/styles/Dropdown.css";
 
 // icons
-import userIcon from "../../../resources/icons/user.svg";
-import rightArrowIcon from "../../../resources/icons/right-arrow.svg";
-import moreIcon from "../../../resources/icons/more-button.svg";
-import controlsIcon from "../../../resources/icons/controls.svg";
-import searchIcon from "../../../resources/icons/search.svg";
+import userIcon from "/static/icons/user.svg";
+import rightArrowIcon from "/static/icons/right-arrow.svg";
+import moreIcon from "/static/icons/more-button.svg";
+import controlsIcon from "/static/icons/controls.svg";
+import searchIcon from "/static/icons/search.svg";
 
+import cachetteNavigation from "./cachette-navigation";
 // Get some shared Styles...
 import {
   NavContainer,
@@ -46,7 +46,7 @@ import {
   SubNavControlElementsWrapperBox,
   ControlIconWrapper,
   FilterButtonContainer,
-  SearchBoxWrapperBox,
+  SearchBoxWrapperBox
 } from "./styled";
 
 const StyledDropdown = Styled(Dropdown)`
@@ -116,24 +116,23 @@ const StyledCalendar = Styled(Calendar)`
 
 class Navigation extends React.Component {
   state = {
-    startDate: null,
+    startDate: null
   };
 
   handleDateChange = date => {
     this.setState({
-      startDate: date,
+      startDate: date
     });
   };
 
   render() {
-    let { props } = this;
+    const { props } = this;
     return (
       <NavContainer navHeight={props.navHeight}>
         <NavContainerFlex alignItems="center" flexDirection="row">
           <LogoContainerBox
             className="logo-container"
-            width={[`8rem`, `10rem`]}
-          >
+            width={[`8rem`, `10rem`]}>
             <StyledLink to="/">
               <LogoWrapper className="logo-wrapper">Logo</LogoWrapper>
             </StyledLink>
@@ -146,8 +145,7 @@ class Navigation extends React.Component {
           <NavLinksContentContainerBox>
             <NavLinksContainerFlex
               flexDirection="row"
-              justifyContent="space-between"
-            >
+              justifyContent="space-between">
               <ArrowIconWrapper>
                 <ArrowIcon src={rightArrowIcon} />
               </ArrowIconWrapper>
@@ -180,8 +178,7 @@ class Navigation extends React.Component {
                   to="#"
                   bgcolor="rgba(0,0,0,0)"
                   color="inherit"
-                  width="80px"
-                >
+                  width="80px">
                   <IconWrapper className="icon-wrapper">
                     <img src={userIcon} alt="user-icon" />
                   </IconWrapper>
@@ -194,10 +191,9 @@ class Navigation extends React.Component {
                   to="#"
                   bgcolor="#DB4437"
                   color="#FFFFFF"
-                  width={`10rem`}
+                  width="10rem"
                   margin="0px 0px 0px 0rem"
-                  padding="1.2rem 1.5rem"
-                >
+                  padding="1.2rem 1.5rem">
                   Register
                 </RegisterBtn>
               </Box>
@@ -214,12 +210,10 @@ class Navigation extends React.Component {
               className="subnav-wrapper-flex"
               flexDirection="row"
               justifyContent="flex-start"
-              alignItems="center"
-            >
+              alignItems="center">
               <SubNavLinksContainerBox
                 className="subnav-links-container"
-                ml={["2rem", "5rem"]}
-              >
+                ml={["2rem", "5rem"]}>
                 <SubNavLinksWrapperFlex className="subnav-links-wrapper-flex">
                   <SubNavLinkWrapperBox className="subnavLinkWrapperBox">
                     <StyledSubNavLink activeClassName="active" to="/">
@@ -252,9 +246,8 @@ class Navigation extends React.Component {
               </SubNavLinksContainerBox>
               <SubNavControlElementsBox
                 className="subnav-control-elements"
-                ml={"auto"}
-                mr="5rem"
-              >
+                ml="auto"
+                mr="5rem">
                 <SubNavControlElementsWrapperFlex>
                   <SubNavControlElementsWrapperBox mr="1rem">
                     <FilterButtonContainer bgcolor="#FFFFFF" color="#1F1f1f">
@@ -305,5 +298,5 @@ export const CachetteNavigation = cachetteNavigation;
 export default Navigation;
 
 Navigation.propTypes = {
-  navHeight: PropTypes.string.isRequired,
+  navHeight: PropTypes.string.isRequired
 };

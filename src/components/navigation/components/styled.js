@@ -3,8 +3,9 @@
 
 import Styled from "styled-components";
 import { Flex, Box } from "rebass";
-import { Link, NavLink } from "react-router-dom";
+import Link from "next/link";
 import { LinkBtn as Btn } from "../../shared/buttons";
+import ActiveLink from "../../shared/active-link";
 
 // Wrapper container for the Hidden navigation
 export const CachetteWrapper = Styled.div`
@@ -62,7 +63,7 @@ export const StyledLink = Styled(Link)`
     text-decortation: none;
 `;
 
-export const StyledNavLink = Styled(NavLink)`
+export const StyledNavLink = Styled(ActiveLink)`
     color: inherit;
     text-decoration: none;
 `;

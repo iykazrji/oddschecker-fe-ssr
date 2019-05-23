@@ -2,12 +2,12 @@
 import React from "react";
 import Styled from "styled-components";
 import { Flex, Box } from "rebass";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 // Bring in Icons
-import loginIcon from "../../../resources/icons/login-icon.svg";
-import menuIcon from "../../../resources/icons/menu.svg";
-import topGamesIcon from "../../../resources/icons/top-games.svg";
+import loginIcon from "/static/icons/login-icon.svg";
+import menuIcon from "/static/resources/icons/menu.svg";
+import topGamesIcon from "/static/resources/icons/top-games.svg";
 
 const FooterNavigationContainer = Styled.div`
     @media screen and (min-width: 960px){

@@ -5,7 +5,7 @@ import Styled from "styled-components";
 import { Flex, Box } from "rebass";
 import Link from "next/link";
 
-import arrowIcon from "../../../resources/icons/right-arrow-filled.svg";
+import arrowIcon from "/static/right-arrow-filled.svg";
 
 /** @component */
 const GameCardContainer = Styled(Flex)`
@@ -142,6 +142,7 @@ const ArrowContainer = Styled.div`
  *  specific leagues.
  *
  *  @visibleName GameCardComponent
+ *  @returns boolean
  */
 
 const checkGamePath = (game, location) => {
@@ -161,6 +162,7 @@ const checkGamePath = (game, location) => {
     }
     return false;
   }
+  return false;
 };
 
 const GameCard = ({ match, game, isEven, location }) => (
@@ -234,4 +236,4 @@ GameCard.defaultProps = {
   match: {}
 };
 
-export default withRouter(GameCard);
+export default GameCard;

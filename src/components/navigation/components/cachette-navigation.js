@@ -10,13 +10,38 @@ export default class CachetteNavigation extends Component {
   state = {
     lastScrollTop: 0,
     delta: 5,
-    isNavVisible: this.props.initVisible ? true : false,
-    shouldNavVisible: this.props.initVisible ? true : false,
-    isScrolling: false,
+    isNavVisible: !!this.props.initVisible,
+    shouldNavVisible: !!this.props.initVisible,
+    isScrolling: false
   };
 
   // Declare Refs...
   cachetteNode = React.createRef();
+
+  componentDidMount() {
+    // Add an Event Listener to listen for scroll Action
+    window.addEventListener("scroll", timer => {
+      this.scrollTimerFn(timer);
+    });
+
+    // Check the NavVisibility...
+    window.requestAnimationFrame(this.checkNavVisibility);
+  }
+
+  shouldComponentUpdate(nextProps, nextState) {
+    if (this.state.lastScrollTop === nextState.lastScrollTop) {
+      return false;
+    }
+    return true;
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener("scroll", timer => {
+      this.scrollTimerFn(timer);
+    });
+
+    window.cancelAnimationFrame(this.checkNavVisibility);
+  }
 
   /**
    * @function startScroll - Function to update state whenever the
@@ -24,7 +49,7 @@ export default class CachetteNavigation extends Component {
    */
   startScroll = () => {
     this.setState(() => ({
-      isScrolling: true,
+      isScrolling: true
     }));
   };
 
@@ -34,7 +59,7 @@ export default class CachetteNavigation extends Component {
    */
   stopScroll = () => {
     this.setState(() => ({
-      isScrolling: false,
+      isScrolling: false
     }));
   };
 
@@ -74,7 +99,7 @@ export default class CachetteNavigation extends Component {
    * @function checkPageScrolledPastTop - Function to check if the scroll Action has passed the top...
    */
   checkPageScrolledPastTop = () => {
-    let scrollTop =
+    const scrollTop =
       window.pageYOffset !== undefined
         ? window.pageYOffset
         : (
@@ -84,16 +109,16 @@ export default class CachetteNavigation extends Component {
           ).scrollTop;
     if (scrollTop >= this.props.navHeight + 100) {
       this.setState({
-        shouldNavVisible: true,
+        shouldNavVisible: true
       });
     } else if (this.props.initVisible) {
       this.setState({
-        shouldNavVisible: false,
+        shouldNavVisible: false
       });
     } else {
       this.setState({
         shouldNavVisible: false,
-        isNavVisible: false,
+        isNavVisible: false
       });
     }
   };
@@ -103,7 +128,7 @@ export default class CachetteNavigation extends Component {
    * has been performed...
    */
   hasScrolled() {
-    let scrollTop =
+    const scrollTop =
       window.pageYOffset !== undefined
         ? window.pageYOffset
         : (
@@ -122,49 +147,20 @@ export default class CachetteNavigation extends Component {
     ) {
       // Scrolling Down
       this.setState({
-        isNavVisible: false,
+        isNavVisible: false
       });
-    } else {
-      // Scrolling Up
-      if (
-        scrollTop + window.innerHeight < document.body.clientHeight &&
-        this.state.shouldNavVisible
-      ) {
-        this.setState({
-          isNavVisible: true,
-        });
-      }
+    } else if (
+      scrollTop + window.innerHeight < document.body.clientHeight &&
+      this.state.shouldNavVisible
+    ) {
+      this.setState({
+        isNavVisible: true
+      });
     }
     // Reset the LastScrollTop state to The current Scroll Position
     this.setState({
-      lastScrollTop: scrollTop,
+      lastScrollTop: scrollTop
     });
-  }
-
-  componentDidMount() {
-    // Add an Event Listener to listen for scroll Action
-    window.addEventListener("scroll", timer => {
-      this.scrollTimerFn(timer);
-    });
-
-    // Check the NavVisibility...
-    window.requestAnimationFrame(this.checkNavVisibility);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener("scroll", timer => {
-      this.scrollTimerFn(timer);
-    });
-
-    window.cancelAnimationFrame(this.checkNavVisibility);
-  }
-
-  shouldComponentUpdate(nextProps, nextState) {
-    if (this.state.lastScrollTop === nextState.lastScrollTop) {
-      return false;
-    } else {
-      return true;
-    }
   }
 
   render() {
@@ -174,8 +170,7 @@ export default class CachetteNavigation extends Component {
       <CachetteWrapper
         ref={this.cachetteNode}
         height={navHeight}
-        isNavVisible={isNavVisible}
-      >
+        isNavVisible={isNavVisible}>
         {_.isFunction(this.props.navComponent)
           ? this.props.navComponent()
           : this.props.navComponent}
@@ -187,5 +182,5 @@ export default class CachetteNavigation extends Component {
 CachetteNavigation.propTypes = {
   initVisible: PropTypes.bool.isRequired,
   navComponent: PropTypes.node.isRequired,
-  navHeight: PropTypes.string.isRequired,
+  navHeight: PropTypes.string.isRequired
 };

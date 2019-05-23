@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import { Flex, Box } from "rebass";
 
 // Social Media Icons
-import GooglePlusIcon from "../../../resources/icons/google-plus-logo.svg";
-import FacebookIcon from "../../../resources/icons/facebook-logo.svg";
-import TwitterIcon from "../../../resources/icons/twitter-logo.svg";
-import InstagramIcon from "../../../resources/icons/instagram-logo.svg";
-import SendIcon from "../../../resources/icons/send-button.svg";
+import GooglePlusIcon from "/static/icons/google-plus-logo.svg";
+import FacebookIcon from "/static/resources/icons/facebook-logo.svg";
+import TwitterIcon from "/static/resources/icons/twitter-logo.svg";
+import InstagramIcon from "/static/resources/icons/instagram-logo.svg";
+import SendIcon from "/static/resources/icons/send-button.svg";
 
 /** Main background component for the site's Footer
  *  @component
@@ -171,7 +171,7 @@ RenderSocialMediaIcon.propTypes = {
   /** The source value for the icon */
   iconSrc: PropTypes.string.isRequired,
   /** The alt text for the image */
-  altText: PropTypes.string.isRequired,
+  altText: PropTypes.string.isRequired
 };
 
 /**
@@ -190,14 +190,12 @@ const Footer = () => {
           flexDirection="row"
           width={[1, 1, 0.9, 0.75]}
           mx="auto"
-          flexWrap="wrap"
-        >
+          flexWrap="wrap">
           <FooterContentBox
             className="logo-text-container"
             width={[1, 6 / 12, 4 / 12, 4 / 12]}
             px={["5px", "10px", "15px", "20px"]}
-            mb={["1.5rem", "0.5rem", "0.5rem", "0rem"]}
-          >
+            mb={["1.5rem", "0.5rem", "0.5rem", "0rem"]}>
             <FooterLogoH2 className="footer-logo">Oddschecker</FooterLogoH2>
             <FooterSubtextP>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
@@ -210,8 +208,7 @@ const Footer = () => {
             className="social-media-icons-container"
             width={[1, 6 / 12, 4 / 12, 3 / 12]}
             px={["5px", "10px", "15px", "20px"]}
-            mb={["3rem", "0.5rem", "0.5rem", "0rem"]}
-          >
+            mb={["3rem", "0.5rem", "0.5rem", "0rem"]}>
             <FooterLogoH2 className="footer-logo">Follow Us</FooterLogoH2>
             <SocialMediaIconsContainer flexDirection="row">
               <SocialMediaIconsWrapper width={[3 / 12]} mr="5px">
@@ -252,8 +249,7 @@ const Footer = () => {
             className="logo-text-container"
             width={[1, 1, 4 / 12, 4 / 12]}
             px={["2.5px", "2.5px", "5px", "5px"]}
-            mb={["1.5rem", "0.5rem", "0.5rem", "0rem"]}
-          >
+            mb={["1.5rem", "0.5rem", "0.5rem", "0rem"]}>
             <FooterLogoH2 className="footer-logo subscribe-heading">
               Subscribe and stay tuned
             </FooterLogoH2>

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 // Primary Button Style
 export const ButtonPrimary = styled.button`
@@ -31,7 +31,7 @@ ButtonPrimary.propTypes = {
   color: PropTypes.string,
   width: PropTypes.string,
   fontSize: PropTypes.string,
-  padding: PropTypes.string,
+  padding: PropTypes.string
 };
 
 LinkBtn.propTypes = {
@@ -40,5 +40,5 @@ LinkBtn.propTypes = {
   width: PropTypes.string,
   fontSize: PropTypes.string,
   padding: PropTypes.string,
-  margin: PropTypes.string,
+  margin: PropTypes.string
 };

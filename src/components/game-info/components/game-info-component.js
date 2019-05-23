@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { useState } from "react";
 import Styled from "styled-components";
 import _ from "lodash";
@@ -14,7 +15,7 @@ import _doubleChanceOddsData from "../../../data/double-chance-odds-data";
 import _mockLeagueOddsData from "../../../data/mock-league";
 import _totalGoalsOddsData from "../../../data/total-goals-odds-data";
 
-import closeIcon from "../../../resources/icons/close.svg";
+import closeIcon from "/static/icons/close.svg";
 
 // Declare styled components...
 const GameComponentWrapper = Styled.div`
