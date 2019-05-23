@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GameCard Matches the Snapshot 1`] = `
+<div
+  className="sc-bdVaJa sc-bwzfXH game-card-container sc-htoDjs lopUrH"
+>
+  <a
+    className="sc-chPdSV dFoQFp"
+    href="undefinedgame/undefined"
+    onClick={[Function]}
+  >
+    <div
+      className="sc-bdVaJa sc-gqjmRU HaFtD"
+    >
+      <div
+        className="sc-bdVaJa sc-bwzfXH sc-dnqmqq exaYQJ"
+        width={
+          Array [
+            "5.5rem",
+          ]
+        }
+      >
+        <div
+          className="sc-bdVaJa sc-iwsKbI izDLIk"
+        >
+          19:45
+        </div>
+        <div
+          className="sc-bdVaJa sc-gZMcBi dknKRj"
+        >
+          26 Aug
+        </div>
+      </div>
+      <div
+        className="sc-jTzLTM ePrWel"
+      >
+        <div
+          className="sc-cSHVUG fGvjcd"
+        >
+          <p
+            className="sc-kAzzGY jLVifM"
+          >
+            Team 1
+          </p>
+        </div>
+      </div>
+      <div
+        className="sc-bdVaJa sc-fjdhpX ctEBta"
+      >
+        <span>
+          vs
+        </span>
+      </div>
+      <div
+        className="sc-jTzLTM ePrWel"
+      >
+        <div
+          className="sc-cSHVUG fGvjcd"
+        >
+          <p
+            className="sc-kAzzGY jLVifM"
+          >
+            Team 2
+          </p>
+        </div>
+      </div>
+    </div>
+  </a>
+</div>
+`;

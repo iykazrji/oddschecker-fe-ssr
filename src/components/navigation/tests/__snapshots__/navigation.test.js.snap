@@ -1,0 +1,415 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navigation Properly renders the Vanilla Navigation 1`] = `
+.c13 {
+  box-sizing: border-box;
+  width: 10rem;
+}
+
+.c16 {
+  box-sizing: border-box;
+}
+
+.c12 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c0 {
+  height: 80;
+  background-color: #FFFFFF;
+  width: 100%;
+  box-shadow: 1px 3px 3px rgba(10,10,10,0.02);
+}
+
+.c1 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100%;
+}
+
+.c2 {
+  box-sizing: border-box;
+  width: 8rem;
+  height: 40%;
+  margin-left: 4rem;
+}
+
+.c4 {
+  width: 100%;
+  height: 100%;
+  background-color: #E6E6E6;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  color: inherit;
+  text-decortation: none;
+}
+
+.c10 {
+  color: inherit;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5 {
+  box-sizing: border-box;
+  margin-left: 3rem;
+}
+
+.c6 {
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c9 {
+  box-sizing: border-box;
+  margin-right: 2.5rem;
+}
+
+.c9 a {
+  display: block;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.c9 a::after {
+  content: "|";
+  font-size: .8rem;
+  margin-left: 2.5rem;
+  display: inline-block;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  color: rgba(10,10,10,0.45);
+}
+
+.c9 a.last {
+  border: none;
+}
+
+.c9 a.last::after {
+  content: "";
+}
+
+.c7 {
+  box-sizing: border-box;
+  margin-right: 2.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c7 a {
+  display: block;
+  font-size: 1.2rem;
+  color: inherit;
+}
+
+.c7 a::after {
+  content: "|";
+  font-size: .8rem;
+  margin-left: 2.5rem;
+  display: inline-block;
+  -webkit-transform: translateY(-2px);
+  -ms-transform: translateY(-2px);
+  transform: translateY(-2px);
+  color: rgba(10,10,10,0.45);
+}
+
+.c7 a.last {
+  border: none;
+}
+
+.c7 a.last::after {
+  content: "";
+}
+
+.c8 {
+  width: 5px;
+  opacity: 0.45;
+  display: block;
+}
+
+.c11 {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: 4rem;
+  min-width: 6rem;
+}
+
+.c15 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-right: 1rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  padding: .5rem;
+  background-color: rgba(100,100,100,0.25);
+}
+
+.c15 img {
+  width: 100%;
+}
+
+.c17 {
+  border-radius: 5px;
+  background-color: #DB4437;
+  color: #FFFFFF;
+  width: 10rem;
+  font-size: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  margin: 0px 0px 0px 0rem;
+  display: block;
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+.c14 {
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0);
+  color: inherit;
+  width: 80px;
+  font-size: 1.2rem;
+  padding: 1rem 1.5rem;
+  margin: 0rem;
+  display: block;
+  text-align: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 0.5rem .8rem;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 0.3rem;
+}
+
+@media screen and (min-width:40em) {
+  .c2 {
+    width: 10rem;
+  }
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <div
+      className="logo-container c2"
+      width={
+        Array [
+          "8rem",
+          "10rem",
+        ]
+      }
+    >
+      <a
+        className="c3"
+        href="/"
+        onClick={[Function]}
+      >
+        <div
+          className="logo-wrapper c4"
+        >
+          Logo
+        </div>
+      </a>
+    </div>
+    <div
+      className="c5"
+    >
+      <div
+        className="c6"
+      >
+        <div
+          className="c7"
+        >
+          <img
+            className="c8"
+            src="right-arrow.svg"
+          />
+        </div>
+        <div
+          className="c9"
+        >
+          <a
+            aria-current="page"
+            className="c10 active"
+            href="/"
+            onClick={[Function]}
+            style={Object {}}
+          >
+            Home
+          </a>
+        </div>
+        <div
+          className="c9"
+        >
+          <a
+            aria-current={null}
+            className="c10"
+            href="/"
+            onClick={[Function]}
+          >
+            About Us
+          </a>
+        </div>
+        <div
+          className="c9"
+        >
+          <a
+            aria-current={null}
+            className="c10"
+            href="/"
+            onClick={[Function]}
+          >
+            Instance Games
+          </a>
+        </div>
+        <div
+          className="c9"
+        >
+          <a
+            aria-current={null}
+            className="c10"
+            href="/"
+            onClick={[Function]}
+          >
+            Betting Highlights
+          </a>
+        </div>
+        <div
+          className="c9"
+        >
+          <a
+            aria-current={null}
+            className="last c10"
+            href="/"
+            onClick={[Function]}
+          >
+            Contact Us
+          </a>
+        </div>
+      </div>
+    </div>
+    <div
+      className="c11"
+    >
+      <div
+        className="c12"
+      >
+        <div
+          className="login-control c13"
+          width={
+            Array [
+              "10rem",
+            ]
+          }
+        >
+          <a
+            bgcolor="rgba(0,0,0,0)"
+            className="login-btn c14"
+            color="inherit"
+            href="/"
+            onClick={[Function]}
+            width="80px"
+          >
+            <div
+              className="icon-wrapper c15"
+            >
+              <img
+                src="user.svg"
+              />
+            </div>
+            <span>
+              Login
+            </span>
+          </a>
+        </div>
+        <div
+          className="register-control c16"
+        >
+          <a
+            bgcolor="#DB4437"
+            className="register-btn c17"
+            color="#FFFFFF"
+            href="/"
+            margin="0px 0px 0px 0rem"
+            onClick={[Function]}
+            padding="1.2rem 1.5rem"
+            width="10rem"
+          >
+            Register
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
