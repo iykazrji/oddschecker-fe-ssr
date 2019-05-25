@@ -39,6 +39,7 @@
     "dev": "nodemon server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
+    "heroku-postbuild": "npm run build",
     "lint": "eslint *.js **/*.js"
   },
   "author": "Iyk Azorji",
