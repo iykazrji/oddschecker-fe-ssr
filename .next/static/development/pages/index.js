@@ -42789,7 +42789,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/navigation/components/cachette-navigation.js";
 // This component uses the Render Prop Pattern to add the 'Cachette'
 // Component Behaviour to the Navigation Component...
 
@@ -42965,12 +42964,7 @@ function (_Component) {
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_10__["CachetteWrapper"], {
         ref: this.cachetteNode,
         height: navHeight,
-        isNavVisible: isNavVisible,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 170
-        },
-        __self: this
+        isNavVisible: isNavVisible
       }, lodash__WEBPACK_IMPORTED_MODULE_9___default.a.isFunction(this.props.navComponent) ? this.props.navComponent() : this.props.navComponent);
     }
   }]);
@@ -43537,7 +43531,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! next/router */ "./node_modules/next/dist/client/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_1__);
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/shared/active-link/index.js";
 
  // typically you want to use `next/link` for this usecase
 // but this example shows how you can also access the router
@@ -43561,12 +43554,7 @@ var ActiveLink = function ActiveLink(_ref) {
     href: href,
     onClick: handleClick,
     style: style,
-    className: router.pathname === href ? "active" : null,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
+    className: router.pathname === href ? "active" : null
   }, children);
 };
 
