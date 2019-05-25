@@ -1,5 +1,6 @@
 /* eslint-disable no-underscore-dangle */
 import React, { useState } from "react";
+import Router from "next/router";
 import Styled from "styled-components";
 import _ from "lodash";
 import { Flex, Box } from "rebass";
@@ -8,14 +9,14 @@ import "react-dropdown/style.css";
 import ReactTable from "react-table";
 import "react-table/react-table.css";
 
-import _x12OddsData from "../../../data/1x2-odds-data";
-import _1stHalfResultOddsData from "../../../data/1st-half-result-odds-data";
-import _bothTeamsToScoreOddsData from "../../../data/both-teams-to-score-odds-data";
-import _doubleChanceOddsData from "../../../data/double-chance-odds-data";
-import _mockLeagueOddsData from "../../../data/mock-league";
-import _totalGoalsOddsData from "../../../data/total-goals-odds-data";
+import _x12OddsData from "@/data/1x2-odds-data";
+import _1stHalfResultOddsData from "@/data/1st-half-result-odds-data";
+import _bothTeamsToScoreOddsData from "@/data/both-teams-to-score-odds-data";
+import _doubleChanceOddsData from "@/data/double-chance-odds-data";
+import _mockLeagueOddsData from "@/data/mock-league";
+import _totalGoalsOddsData from "@/data/total-goals-odds-data";
 
-import closeIcon from "/static/icons/close.svg";
+import closeIcon from "@/resources/icons/close.svg";
 
 // Declare styled components...
 const GameComponentWrapper = Styled.div`
@@ -212,7 +213,7 @@ const TableLogoWrapper = Styled.div`
   display: flex;
   justify-content:center;
   align-items: center;
-  padding: .25rem
+  padding: .25rem;
   img {
     height: auto;
     max-height: 100%;
@@ -236,8 +237,8 @@ const TableSubtextWrapper = Styled.div`
   }
 `;
 
-const goBack = history => {
-  history.push("/");
+const goBack = router => {
+  router.push("/");
 };
 
 const _x12tableColumns = [
@@ -385,8 +386,7 @@ const _totalGoalsTableColumns = [
 ];
 
 // GameInfoComponent...
-const GameInfoComponent = ({ match, history }) => {
-  const gameId = match.params.id;
+const GameInfoComponent = ({ gameId }) => {
   const gameObj = _.chain(_mockLeagueOddsData)
     .map(league => {
       return _.find(league.games, game => {
@@ -474,7 +474,7 @@ const GameInfoComponent = ({ match, history }) => {
               <CloseButton
                 onClick={e => {
                   e.stopPropagation();
-                  goBack(history);
+                  goBack(Router);
                 }}
               />
             </CloseButtonWrapper>

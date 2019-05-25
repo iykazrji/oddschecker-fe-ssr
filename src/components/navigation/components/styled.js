@@ -58,7 +58,7 @@ export const LogoWrapper = Styled.div`
     align-items: center;
 `;
 
-export const StyledLink = Styled(Link)`
+export const StyledLink = Styled.a`
     color: inherit;
     text-decortation: none;
 `;
@@ -75,10 +75,7 @@ export const StyledSubNavLink = Styled(StyledNavLink)`
     align-items: center;
     font-size: .95rem;
     text-transform: uppercase;
-    padding: 0px .5rem;
-    &.active{
-        border-bottom: .25rem solid #DB4437;
-    }
+    padding: 0px .5rem;    
 `;
 
 export const NavLinksContentContainerBox = Styled(Box)`
@@ -189,10 +186,19 @@ export const SubNavLinksWrapperFlex = Styled(Flex)`
 `;
 
 export const SubNavLinkWrapperBox = Styled(Box)`
-    display: block;
+    display: flex;
     height: 100%;
     padding: 0px .5rem;
     margin-right: 2rem;
+    font-size: 1rem;
+    a {
+        color: inherit;
+        display: block;
+        padding-top: 10px;
+        &.active{
+            border-bottom: .25rem solid #DB4437;
+        }
+    }
 `;
 
 export const SubNavControlElementsBox = Styled(Box)`

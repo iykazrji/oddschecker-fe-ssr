@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
-import Link from "next/link";
 
 // Primary Button Style
 export const ButtonPrimary = styled.button`
@@ -14,7 +13,7 @@ export const ButtonPrimary = styled.button`
   text-align: center;
 `;
 
-export const LinkBtn = styled(Link)`
+export const LinkBtn = styled.a`
   border-radius: 5px;
   background-color: ${props => (props.bgcolor ? props.bgcolor : "#1F1F1F")};
   color: ${props => (props.color ? props.color : "#FFFFFF")};

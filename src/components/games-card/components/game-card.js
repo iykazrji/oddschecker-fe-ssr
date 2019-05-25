@@ -1,11 +1,12 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable react/forbid-prop-types */
 import React from "react";
 import PropTypes from "prop-types";
 import Styled from "styled-components";
 import { Flex, Box } from "rebass";
-import Link from "next/link";
+import { Link } from "../../../../routes";
 
-import arrowIcon from "/static/right-arrow-filled.svg";
+import arrowIcon from "@/resources/icons/right-arrow-filled.svg";
 
 /** @component */
 const GameCardContainer = Styled(Flex)`
@@ -115,7 +116,7 @@ const TeamNameText = Styled.p`
   }
 `;
 
-const StyledLink = Styled(Link)`
+const StyledLink = Styled.a`
 	width: 100%;
 	color: inherit;
 	text-decoration: none;
@@ -165,7 +166,7 @@ const checkGamePath = (game, location) => {
   return false;
 };
 
-const GameCard = ({ match, game, isEven, location }) => (
+const GameCard = ({ game, isEven, location }) => (
   <GameCardContainer
     className="game-card-container"
     alignItems="center"
@@ -179,41 +180,42 @@ const GameCard = ({ match, game, isEven, location }) => (
         We are removing the team badge placeholders for now till they are provided.
         TODO: Replace the TeamBadge components when the team badges can be made available.
     */}
-    <StyledLink
-      to={{ pathname: `${match.url}game/${game.id}`, state: { modal: true } }}>
-      <TeamContentWrapper>
-        <GameTimeContainer
-          flexDirection="column"
-          width={["auto", "auto", "5.5rem", "5.5rem"]}>
-          <GameTimeWrapper>
-            {game && game.time ? game.time.time : `19:45`}
-          </GameTimeWrapper>
-          <GameDateWrapper>
-            {game && game.time ? game.time.date : `26 Aug`}
-          </GameDateWrapper>
-        </GameTimeContainer>
-        <TeamInfoContainer>
-          <TeamNameWrapper>
-            <TeamNameText>
-              {game && game.team1 ? game.team1.name : "Team 1"}
-            </TeamNameText>
-          </TeamNameWrapper>
-          <VsTextWrapper>
-            <span>vs</span>
-          </VsTextWrapper>
+    <Link route={`/game/${game.id}`} passHref>
+      <StyledLink>
+        <TeamContentWrapper>
+          <GameTimeContainer
+            flexDirection="column"
+            width={["auto", "auto", "5.5rem", "5.5rem"]}>
+            <GameTimeWrapper>
+              {game && game.time ? game.time.time : `19:45`}
+            </GameTimeWrapper>
+            <GameDateWrapper>
+              {game && game.time ? game.time.date : `26 Aug`}
+            </GameDateWrapper>
+          </GameTimeContainer>
           <TeamInfoContainer>
             <TeamNameWrapper>
               <TeamNameText>
-                {game && game.team2 ? game.team2.name : "Team 2"}
+                {game && game.team1 ? game.team1.name : "Team 1"}
               </TeamNameText>
             </TeamNameWrapper>
+            <VsTextWrapper>
+              <span>vs</span>
+            </VsTextWrapper>
+            <TeamInfoContainer>
+              <TeamNameWrapper>
+                <TeamNameText>
+                  {game && game.team2 ? game.team2.name : "Team 2"}
+                </TeamNameText>
+              </TeamNameWrapper>
+            </TeamInfoContainer>
           </TeamInfoContainer>
-        </TeamInfoContainer>
-      </TeamContentWrapper>
-      <ArrowContainer>
-        <img src={arrowIcon} alt="Arrow Icon" />
-      </ArrowContainer>
-    </StyledLink>
+        </TeamContentWrapper>
+        <ArrowContainer>
+          <img src={arrowIcon} alt="Arrow Icon" />
+        </ArrowContainer>
+      </StyledLink>
+    </Link>
   </GameCardContainer>
 );
 

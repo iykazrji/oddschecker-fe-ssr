@@ -8,13 +8,14 @@ import Dropdown, {
   DropdownContent
 } from "react-simple-dropdown";
 import "react-simple-dropdown/styles/Dropdown.css";
+import Link from "next/link";
 
 // icons
-import userIcon from "/static/icons/user.svg";
-import rightArrowIcon from "/static/icons/right-arrow.svg";
-import moreIcon from "/static/icons/more-button.svg";
-import controlsIcon from "/static/icons/controls.svg";
-import searchIcon from "/static/icons/search.svg";
+import userIcon from "@/resources/icons/user.svg";
+import rightArrowIcon from "@/resources/icons/right-arrow.svg";
+import moreIcon from "@/resources/icons/more-button.svg";
+import controlsIcon from "@/resources/icons/controls.svg";
+import searchIcon from "@/resources/icons/search.svg";
 
 import cachetteNavigation from "./cachette-navigation";
 // Get some shared Styles...
@@ -133,9 +134,11 @@ class Navigation extends React.Component {
           <LogoContainerBox
             className="logo-container"
             width={[`8rem`, `10rem`]}>
-            <StyledLink to="/">
-              <LogoWrapper className="logo-wrapper">Logo</LogoWrapper>
-            </StyledLink>
+            <Link href="/">
+              <StyledLink>
+                <LogoWrapper className="logo-wrapper">Logo</LogoWrapper>
+              </StyledLink>
+            </Link>
           </LogoContainerBox>
 
           {/* Wrapper components for the NavLinks
@@ -150,21 +153,29 @@ class Navigation extends React.Component {
                 <ArrowIcon src={rightArrowIcon} />
               </ArrowIconWrapper>
               <NavLinkWrapperBox>
-                <StyledNavLink to="/">Home</StyledNavLink>
+                <Link href="/" passHref>
+                  <StyledNavLink>Home</StyledNavLink>
+                </Link>
               </NavLinkWrapperBox>
               <NavLinkWrapperBox>
-                <StyledNavLink to="#">About Us</StyledNavLink>
+                <Link href="#" passHref>
+                  <StyledNavLink>About Us</StyledNavLink>
+                </Link>
               </NavLinkWrapperBox>
               <NavLinkWrapperBox>
-                <StyledNavLink to="#">Instance Games</StyledNavLink>
+                <Link href="#" passHref>
+                  <StyledNavLink>Instance Games</StyledNavLink>
+                </Link>
               </NavLinkWrapperBox>
               <NavLinkWrapperBox>
-                <StyledNavLink to="#">Betting Highlights</StyledNavLink>
+                <Link href="#" passHref>
+                  <StyledNavLink>Betting Highlights</StyledNavLink>
+                </Link>
               </NavLinkWrapperBox>
               <NavLinkWrapperBox>
-                <StyledNavLink to="#" className="last">
-                  Contact Us
-                </StyledNavLink>
+                <Link href="#" passHref>
+                  <StyledNavLink>Contact Us</StyledNavLink>
+                </Link>
               </NavLinkWrapperBox>
             </NavLinksContainerFlex>
           </NavLinksContentContainerBox>
@@ -216,27 +227,27 @@ class Navigation extends React.Component {
                 ml={["2rem", "5rem"]}>
                 <SubNavLinksWrapperFlex className="subnav-links-wrapper-flex">
                   <SubNavLinkWrapperBox className="subnavLinkWrapperBox">
-                    <StyledSubNavLink activeClassName="active" to="/">
-                      All Games
-                    </StyledSubNavLink>
+                    <Link href="/" passHref>
+                      <StyledSubNavLink>All Games</StyledSubNavLink>
+                    </Link>
                   </SubNavLinkWrapperBox>
                   <SubNavLinkWrapperBox className="subnavLinkWrapperBox">
-                    <StyledSubNavLink activeClassName="active" to="#">
+                    <StyledSubNavLink activeClassName="active" href="#">
                       Live Games
                     </StyledSubNavLink>
                   </SubNavLinkWrapperBox>
                   <SubNavLinkWrapperBox className="subnavLinkWrapperBox">
-                    <StyledSubNavLink activeClassName="active" to="#">
+                    <StyledSubNavLink activeClassName="active" href="#">
                       Finished
                     </StyledSubNavLink>
                   </SubNavLinkWrapperBox>
                   <SubNavLinkWrapperBox className="subnavLinkWrapperBox">
-                    <StyledSubNavLink activeClassName="active" to="#">
+                    <StyledSubNavLink activeClassName="active" href="#">
                       Scheduled
                     </StyledSubNavLink>
                   </SubNavLinkWrapperBox>
                   <SubNavLinkWrapperBox className="subnavLinkWrapperBox">
-                    <StyledSubNavLink activeClassName="active" to="#">
+                    <StyledSubNavLink activeClassName="active" href="#">
                       <MoreIconWrapper className="more-icon-wrapper">
                         <img src={moreIcon} alt="more-icon" />
                       </MoreIconWrapper>

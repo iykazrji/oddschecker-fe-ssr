@@ -5,11 +5,11 @@ import PropTypes from "prop-types";
 import { Flex, Box } from "rebass";
 
 // Social Media Icons
-import GooglePlusIcon from "/static/icons/google-plus-logo.svg";
-import FacebookIcon from "/static/resources/icons/facebook-logo.svg";
-import TwitterIcon from "/static/resources/icons/twitter-logo.svg";
-import InstagramIcon from "/static/resources/icons/instagram-logo.svg";
-import SendIcon from "/static/resources/icons/send-button.svg";
+import GooglePlusIcon from "@/resources/icons/google-plus-logo.svg";
+import FacebookIcon from "@/resources/icons/facebook-logo.svg";
+import TwitterIcon from "@/resources/icons/twitter-logo.svg";
+import InstagramIcon from "@/resources/icons/instagram-logo.svg";
+import SendIcon from "@/resources/icons/send-button.svg";
 
 /** Main background component for the site's Footer
  *  @component

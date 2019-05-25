@@ -1,10 +1,10 @@
-import nairabetLogo from "/static/icons/company-logos/nairabet.svg";
-import bet9jaLogo from "/static/icons/company-logos/bet9ja.svg";
-import betWayLogo from "/static/icons/company-logos/betway.svg";
-import betKingLogo from "/static/icons/company-logos/betking-logo.svg";
-import sportybetLogo from "/static/icons/company-logos/sportybet.svg";
-import _1960betLogo from "/static/icons/company-logos/1960bet.png";
-import surebetLogo from "/static/icons/company-logos/surebet247.png";
+import nairabetLogo from "@/resources/icons/company-logos/nairabet.svg";
+import bet9jaLogo from "@/resources/icons/company-logos/bet9ja.svg";
+import betWayLogo from "@/resources/icons/company-logos/betway.svg";
+import betKingLogo from "@/resources/icons/company-logos/betking-logo.svg";
+import sportybetLogo from "@/resources/icons/company-logos/sportybet.svg";
+import _1960betLogo from "@/resources/icons/company-logos/1960bet.png";
+import surebetLogo from "@/resources/icons/company-logos/surebet247.png";
 
 export default [
   {

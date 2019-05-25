@@ -8,7 +8,7 @@ import { withRouter } from "next/router";
 const ActiveLink = ({ children, router, href }) => {
   const style = {
     marginRight: 10,
-    color: router.pathname === href ? "red" : "black"
+    color: "inherit"
   };
 
   const handleClick = e => {
@@ -17,7 +17,11 @@ const ActiveLink = ({ children, router, href }) => {
   };
 
   return (
-    <a href={href} onClick={handleClick} style={style}>
+    <a
+      href={href}
+      onClick={handleClick}
+      style={style}
+      className={router.pathname === href ? "active" : null}>
       {children}
     </a>
   );

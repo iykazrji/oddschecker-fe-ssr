@@ -8,9 +8,17 @@ module.exports = {
     "no-use-before-define": "off",
     "react/jsx-filename-extension": "off",
     "react/prop-types": "off",
-    "comma-dangle": "off"
+    "comma-dangle": "off",
+    "jsx-a11y/anchor-is-valid": "off"
   },
   globals: {
     fetch: false
+  },
+  settings: {
+    "import/resolver": {
+      node: {
+        paths: ["src"]
+      }
+    }
   }
 };

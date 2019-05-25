@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable no-nested-ternary */
 import React from "react";
 import Styled from "styled-components";
@@ -5,9 +6,9 @@ import { Flex, Box } from "rebass";
 import Link from "next/link";
 
 // Bring in Icons
-import loginIcon from "/static/icons/login-icon.svg";
-import menuIcon from "/static/resources/icons/menu.svg";
-import topGamesIcon from "/static/resources/icons/top-games.svg";
+import loginIcon from "@/resources/icons/login-icon.svg";
+import menuIcon from "@/resources/icons/menu.svg";
+import topGamesIcon from "@/resources/icons/top-games.svg";
 
 const FooterNavigationContainer = Styled.div`
     @media screen and (min-width: 960px){
@@ -39,7 +40,7 @@ const NavigationLinkWrapper = Styled(Box)`
   }
 `;
 
-const NavigationLink = Styled(Link)`
+const NavigationLink = Styled.a`
   display: flex;
   flex-direction: column;
   width: 7rem;
@@ -74,38 +75,44 @@ const FixedFooterNavigation = () => {
       <NavigationLinksContainer flexDirection="row" width={["0.8"]}>
         {/* Menu Link */}
         <NavigationLinkWrapper width={[4 / 12]}>
-          <NavigationLink to="/">
-            <NavigationLinkIconWrapper>
-              <img src={menuIcon} alt="menu icon" />
-            </NavigationLinkIconWrapper>
-            <NavigationTextWrapper>
-              <span>Menu</span>
-            </NavigationTextWrapper>
-          </NavigationLink>
+          <Link href="/" passHref>
+            <NavigationLink>
+              <NavigationLinkIconWrapper>
+                <img src={menuIcon} alt="menu icon" />
+              </NavigationLinkIconWrapper>
+              <NavigationTextWrapper>
+                <span>Menu</span>
+              </NavigationTextWrapper>
+            </NavigationLink>
+          </Link>
         </NavigationLinkWrapper>
 
         {/* Tog Games Link */}
         <NavigationLinkWrapper width={[4 / 12]}>
-          <NavigationLink to="/">
-            <NavigationLinkIconWrapper>
-              <img src={topGamesIcon} alt="top games icon" />
-            </NavigationLinkIconWrapper>
-            <NavigationTextWrapper>
-              <span>Top Games</span>
-            </NavigationTextWrapper>
-          </NavigationLink>
+          <Link href="/" passHref>
+            <NavigationLink>
+              <NavigationLinkIconWrapper>
+                <img src={topGamesIcon} alt="top games icon" />
+              </NavigationLinkIconWrapper>
+              <NavigationTextWrapper>
+                <span>Top Games</span>
+              </NavigationTextWrapper>
+            </NavigationLink>
+          </Link>
         </NavigationLinkWrapper>
 
         {/* Tog Games Link */}
         <NavigationLinkWrapper width={[4 / 12]}>
-          <NavigationLink to="/">
-            <NavigationLinkIconWrapper>
-              <img src={loginIcon} alt="login icon" />
-            </NavigationLinkIconWrapper>
-            <NavigationTextWrapper>
-              <span>Login</span>
-            </NavigationTextWrapper>
-          </NavigationLink>
+          <Link href="/" passHref>
+            <NavigationLink>
+              <NavigationLinkIconWrapper>
+                <img src={loginIcon} alt="login icon" />
+              </NavigationLinkIconWrapper>
+              <NavigationTextWrapper>
+                <span>Login</span>
+              </NavigationTextWrapper>
+            </NavigationLink>
+          </Link>
         </NavigationLinkWrapper>
       </NavigationLinksContainer>
     </FooterNavigationContainer>

@@ -4,12 +4,14 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.17.2",
     "eslint-plugin-jsx-a11y": "^6.2.1",
     "eslint-plugin-react": "^7.13.0",
+    "express": "^4.17.0",
     "grid-styled": "^5.0.2",
     "lodash": "^4.17.11",
     "next": "^8.1.0",
@@ -24,16 +26,19 @@
     "react-simple-dropdown": "^3.2.3",
     "react-table": "^6.10.0",
     "rebass": "^3.1.0",
-    "styled-components": "^4.2.0"
+    "styled-components": "^4.2.0",
+    "styled-jsx": "^3.2.1"
   },
   "devDependencies": {
+    "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.0",
-    "eslint-config-prettier": "^4.3.0"
+    "eslint-config-prettier": "^4.3.0",
+    "nodemon": "^1.19.0"
   },
   "scripts": {
-    "dev": "next",
+    "dev": "nodemon server.js",
     "build": "next build",
-    "start": "next start",
+    "start": "NODE_ENV=production node server.js",
     "lint": "eslint *.js **/*.js"
   },
   "author": "Iyk Azorji",
