@@ -5,48 +5,68 @@ import betKingLogo from "@/resources/icons/company-logos/betking-logo.svg";
 import sportybetLogo from "@/resources/icons/company-logos/sportybet.svg";
 import _1960betLogo from "@/resources/icons/company-logos/1960bet.png";
 import surebetLogo from "@/resources/icons/company-logos/surebet247.png";
+import merrybetLogo from "@/resources/icons/company-logos/merrybet.png";
 
-export default [
-  {
-    logo: nairabetLogo,
-    bookie: "Nairabet",
-    yes: "1.23",
-    no: "2.45"
-  },
-  {
-    logo: bet9jaLogo,
-    bookie: "Bet9ja",
-    yes: "2.23",
-    no: "4.45"
-  },
-  {
-    logo: _1960betLogo,
-    bookie: "1960Bet",
-    yes: "2.13",
-    no: "2.45"
-  },
-  {
-    logo: betWayLogo,
-    bookie: "Betway",
-    yes: "1.23",
-    no: "2.45"
-  },
-  {
-    logo: betKingLogo,
-    bookie: "Betking",
-    yes: "1.23",
-    no: "2.45"
-  },
-  {
-    logo: sportybetLogo,
-    bookie: "SportyBet",
-    yes: "1.23",
-    no: "2.45"
-  },
-  {
-    logo: surebetLogo,
-    bookie: "Surebet",
-    yes: "1.23",
-    no: "2.45"
-  }
-];
+const buildDataTable = (
+  bet9jaOdds,
+  merryBetOdds,
+  surebetOdds,
+  betwayOdds,
+  sportybetOdds,
+  nairabetOdds,
+  _1960betOdds,
+  betkingOdds
+) => {
+  return [
+    {
+      logo: nairabetLogo,
+      bookie: "Nairabet",
+      yes: nairabetOdds ? nairabetOdds.GG : "--.--",
+      no: nairabetOdds ? nairabetOdds.NG : "--.--"
+    },
+    {
+      logo: bet9jaLogo,
+      bookie: "Bet9ja",
+      yes: bet9jaOdds ? bet9jaOdds.GG : "--.--",
+      no: bet9jaOdds ? bet9jaOdds.NG : "--.--"
+    },
+    {
+      logo: _1960betLogo,
+      bookie: "1960Bet",
+      yes: _1960betOdds ? _1960betOdds.GG : "--.--",
+      no: _1960betOdds ? _1960betOdds.NG : "--.--"
+    },
+    {
+      logo: betWayLogo,
+      bookie: "Betway",
+      yes: betwayOdds ? betwayOdds.GG : "--.--",
+      no: betwayOdds ? betwayOdds.NG : "--.--"
+    },
+    {
+      logo: betKingLogo,
+      bookie: "Betking",
+      yes: betkingOdds ? betkingOdds.GG : "--.--",
+      no: betkingOdds ? betkingOdds.NG : "--.--"
+    },
+    {
+      logo: sportybetLogo,
+      bookie: "SportyBet",
+      yes: sportybetOdds ? sportybetOdds.GG : "--.--",
+      no: sportybetOdds ? sportybetOdds.NG : "--.--"
+    },
+    {
+      logo: surebetLogo,
+      bookie: "Surebet",
+      yes: surebetOdds ? surebetOdds.GG : "--.--",
+      no: surebetOdds ? surebetOdds.NG : "--.--"
+    },
+    {
+      logo: merrybetLogo,
+      bookie: "Merrybet",
+      yes: merryBetOdds ? merryBetOdds.GG : "--.--",
+      no: merryBetOdds ? merryBetOdds.NG : "--.--"
+    }
+  ];
+};
+
+export default buildDataTable;

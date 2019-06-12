@@ -1,3 +1,4 @@
+/* eslint-disable no-underscore-dangle */
 import React, { Fragment } from "react";
 import Head from "next/head";
 import Styled from "styled-components";
@@ -14,8 +15,22 @@ import LeagueContainer from "../src/components/league-container/components/leagu
 import GameInfoComponent from "../src/components/game-info/components/game-info-component";
 import Footer from "../src/components/footer/components";
 
-// Get Mock Data...
-import MockLeague from "../src/data/mock-league";
+// Get Ad Banners
+import ad1 from "@/resources/images/ad-banners/ad1.png";
+import ad2 from "@/resources/images/ad-banners/ad2.png";
+
+// Get Games and Odds Data
+import {
+  getAllGamesInfo,
+  getBet9jaGamesInfo,
+  get1960BetGamesInfo,
+  getBetKingGamesInfo,
+  getBetWayGamesInfo,
+  getMerryBetGamesInfo,
+  getNairaBetGamesInfo,
+  getSportyBetGamesInfo,
+  getSureBetGamesInfo
+} from "../api/website-odds-service";
 
 const MainContentContainerFlex = Styled(Flex)`
   height: 100%;
@@ -64,25 +79,89 @@ const AdBannerImg = Styled.img`
   align-self: flex-start;
 `;
 
-const renderLeagues = leagueData => {
-  return leagueData.map((_leagueData, index) => {
-    return <LeagueContainer key={index} leagueData={_leagueData} />;
+const filterForSelectedGame = (market, id) => {
+  return market.filter(game => {
+    if (game && game.eventID) {
+      return game.eventID.localeCompare(id) === 0;
+    }
+
+    return null;
   });
+};
+
+const renderLeagues = leagueData => {
+  if (leagueData) {
+    return leagueData.map((_leagueData, index) => {
+      // eslint-disable-next-line react/no-array-index-key
+      return <LeagueContainer key={index} leagueData={_leagueData} />;
+    });
+  }
+  return null;
 };
 
 class Home extends React.Component {
   static async getInitialProps({ query }) {
-    if (query) {
-      return {
-        query,
-        id: query.id
+    try {
+      // Get all European Games
+      const europeanGames = await getAllGamesInfo("merrybet", "eu");
+      const mlsGames = await getAllGamesInfo("merrybet", "mls");
+      console.log(europeanGames.data);
+
+      // The response object contains data that would be returned
+      // From our GetInitialProps method...
+      let responseObj = {
+        europeanGames: europeanGames.data || null,
+        mlsGames: mlsGames.data || null
       };
+
+      if (query) {
+        // Get Markets data for odds...
+        const bet9jaData = await getBet9jaGamesInfo("bet9ja", query.league);
+        const merrybetData = await getMerryBetGamesInfo(query.league);
+        const surebetData = await getSureBetGamesInfo(query.league);
+        const betwayData = await getBetWayGamesInfo(query.league);
+        const sportybetData = await getSportyBetGamesInfo(query.league);
+        const nairabetData = await getNairaBetGamesInfo(query.league);
+        const _1960betData = await get1960BetGamesInfo(query.league);
+        const betkingData = await getBetKingGamesInfo(query.league);
+        responseObj = {
+          ...responseObj,
+          query,
+          id: query.id,
+          bet9jaData: bet9jaData.data,
+          merrybetData: merrybetData.data,
+          surebetData: surebetData.data,
+          betwayData: betwayData.data,
+          sportybetData: sportybetData.data,
+          nairabetData: nairabetData.data,
+          _1960betData: _1960betData.data,
+          betkingData: betkingData.data
+        };
+      }
+      return responseObj;
+    } catch (err) {
+      console.log(err);
+      return err;
     }
-    return {};
   }
 
   render() {
-    const { id } = this.props;
+    const {
+      id,
+      europeanGames,
+      mlsGames,
+      bet9jaData,
+      merrybetData,
+      surebetData,
+      betwayData,
+      sportybetData,
+      nairabetData,
+      _1960betData,
+      betkingData
+    } = this.props;
+    console.log(this.props);
+
+    const leagues = [{ mlsGames }, { europeanGames }];
     return (
       <Fragment>
         <Head>
@@ -108,32 +187,60 @@ class Home extends React.Component {
                 render={() => {
                   return (
                     <Fragment>
-                      <AdSense.Google
-                        client="ca-pub-0936516816530901"
-                        slot="1068504788"
-                        responsive="true"
-                        format="auto"
-                        style={{
-                          display: "inline-block",
-                          width: "970px",
-                          height: "90px"
-                        }}
-                      />
+                      <img src={ad1} alt="Ad Banner" />
                     </Fragment>
                   );
                 }}
               />
               <GamesContentContainer>
                 <LeagueContentContainer>
-                  {renderLeagues(MockLeague)}
+                  {renderLeagues(leagues)}
                 </LeagueContentContainer>
-                {/* <Route
-                path={`${match.url}game/:id`}
-                render={({ match, history }) => {
-                  return <GameInfoComponent match={match} history={history} />;
-                }}
-              /> */
-                id ? <GameInfoComponent gameId={id} /> : null}
+                {id ? (
+                  <GameInfoComponent
+                    gameId={id}
+                    bet9jaData={
+                      bet9jaData
+                        ? filterForSelectedGame(bet9jaData.market, id)
+                        : null
+                    }
+                    merrybetData={
+                      merrybetData
+                        ? filterForSelectedGame(merrybetData.market, id)
+                        : null
+                    }
+                    surebetData={
+                      surebetData
+                        ? filterForSelectedGame(surebetData.market, id)
+                        : null
+                    }
+                    betwayData={
+                      betwayData
+                        ? filterForSelectedGame(betwayData.market, id)
+                        : null
+                    }
+                    sportybetData={
+                      sportybetData
+                        ? filterForSelectedGame(sportybetData.market, id)
+                        : null
+                    }
+                    nairabetData={
+                      nairabetData
+                        ? filterForSelectedGame(nairabetData.market, id)
+                        : null
+                    }
+                    _1960betData={
+                      _1960betData
+                        ? filterForSelectedGame(_1960betData.market, id)
+                        : null
+                    }
+                    betkingData={
+                      betkingData
+                        ? filterForSelectedGame(betkingData.market, id)
+                        : null
+                    }
+                  />
+                ) : null}
               </GamesContentContainer>
             </MainGamesContentContainerBox>
             <MainAdsContentContainerBox width={[0, 0, 0, 0.2]} px={["2rem"]}>
@@ -142,17 +249,7 @@ class Home extends React.Component {
                 render={() => {
                   return (
                     <Fragment>
-                      <AdSense.Google
-                        client="ca-pub-0936516816530901"
-                        slot="2688654314"
-                        responsive="true"
-                        format="auto"
-                        style={{
-                          display: "inline-block",
-                          width: "169px",
-                          height: "600px"
-                        }}
-                      />
+                      <img src={ad2} alt="Ad Banner" />
                     </Fragment>
                   );
                 }}

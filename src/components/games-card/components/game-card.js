@@ -166,59 +166,59 @@ const checkGamePath = (game, location) => {
   return false;
 };
 
-const GameCard = ({ game, isEven, location }) => (
-  <GameCardContainer
-    className="game-card-container"
-    alignItems="center"
-    px={["1.5rem"]}
-    py={["2rem", "2rem", "1rem", "1rem"]}
-    isEven={isEven}
-    isActiveGame={checkGamePath(game, location)}>
-    {/* We are passing a 'TRUE' state to the location prop so we can use it in the parent router to perform
+const GameCard = ({ game, isEven, location, league }) => {
+  if (!game) {
+    return null;
+  }
+  const teams = game.event.split("-", 2);
+  const team1 = teams[0];
+  const team2 = teams[1];
+
+  return (
+    <GameCardContainer
+      className="game-card-container"
+      alignItems="center"
+      px={["1.5rem"]}
+      py={["2rem", "2rem", "1rem", "1rem"]}
+      isEven={isEven}
+      isActiveGame={checkGamePath(game, location)}>
+      {/* We are passing a 'TRUE' state to the location prop so we can use it in the parent router to perform
         Consecutive Route renders 
         ...
         We are removing the team badge placeholders for now till they are provided.
         TODO: Replace the TeamBadge components when the team badges can be made available.
     */}
-    <Link route={`/game/${game.id}`} passHref>
-      <StyledLink>
-        <TeamContentWrapper>
-          <GameTimeContainer
-            flexDirection="column"
-            width={["auto", "auto", "5.5rem", "5.5rem"]}>
-            <GameTimeWrapper>
-              {game && game.time ? game.time.time : `19:45`}
-            </GameTimeWrapper>
-            <GameDateWrapper>
-              {game && game.time ? game.time.date : `26 Aug`}
-            </GameDateWrapper>
-          </GameTimeContainer>
-          <TeamInfoContainer>
-            <TeamNameWrapper>
-              <TeamNameText>
-                {game && game.team1 ? game.team1.name : "Team 1"}
-              </TeamNameText>
-            </TeamNameWrapper>
-            <VsTextWrapper>
-              <span>vs</span>
-            </VsTextWrapper>
+      <Link route={`/game/${league}/${game.eventID || game.eventRef}`} passHref>
+        <StyledLink>
+          <TeamContentWrapper>
+            <GameTimeContainer
+              flexDirection="column"
+              width={["auto", "auto", "5.5rem", "5.5rem"]}>
+              <GameTimeWrapper>{game.time || `19:45`}</GameTimeWrapper>
+              <GameDateWrapper>{game.date || `26 Aug`}</GameDateWrapper>
+            </GameTimeContainer>
             <TeamInfoContainer>
               <TeamNameWrapper>
-                <TeamNameText>
-                  {game && game.team2 ? game.team2.name : "Team 2"}
-                </TeamNameText>
+                <TeamNameText>{team1 || "Team 1"}</TeamNameText>
               </TeamNameWrapper>
+              <VsTextWrapper>
+                <span>vs</span>
+              </VsTextWrapper>
+              <TeamInfoContainer>
+                <TeamNameWrapper>
+                  <TeamNameText>{team2 || "Team 2"}</TeamNameText>
+                </TeamNameWrapper>
+              </TeamInfoContainer>
             </TeamInfoContainer>
-          </TeamInfoContainer>
-        </TeamContentWrapper>
-        <ArrowContainer>
-          <img src={arrowIcon} alt="Arrow Icon" />
-        </ArrowContainer>
-      </StyledLink>
-    </Link>
-  </GameCardContainer>
-);
-
+          </TeamContentWrapper>
+          <ArrowContainer>
+            <img src={arrowIcon} alt="Arrow Icon" />
+          </ArrowContainer>
+        </StyledLink>
+      </Link>
+    </GameCardContainer>
+  );
+};
 GameCard.propTypes = {
   /** Check if game card is even */
   isEven: PropTypes.bool,

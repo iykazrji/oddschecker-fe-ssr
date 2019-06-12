@@ -5,55 +5,76 @@ import betKingLogo from "@/resources/icons/company-logos/betking-logo.svg";
 import sportybetLogo from "@/resources/icons/company-logos/sportybet.svg";
 import _1960betLogo from "@/resources/icons/company-logos/1960bet.png";
 import surebetLogo from "@/resources/icons/company-logos/surebet247.png";
+import merrybetLogo from "@/resources/icons/company-logos/merrybet.png";
 
-export default [
-  {
-    logo: nairabetLogo,
-    bookie: "Nairabet",
-    "1": "1.23",
-    x: "2.45",
-    "2": "4.33"
-  },
-  {
-    logo: bet9jaLogo,
-    bookie: "Bet9ja",
-    "1": "2.23",
-    x: "4.45",
-    "2": "3.33"
-  },
-  {
-    logo: _1960betLogo,
-    bookie: "1960Bet",
-    "1": "2.13",
-    x: "2.45",
-    "2": "5.13"
-  },
-  {
-    logo: betWayLogo,
-    bookie: "Betway",
-    "1": "1.23",
-    x: "2.45",
-    "2": "4.33"
-  },
-  {
-    logo: betKingLogo,
-    bookie: "Betking",
-    "1": "1.23",
-    x: "2.45",
-    "2": "4.33"
-  },
-  {
-    logo: sportybetLogo,
-    bookie: "SportyBet",
-    "1": "1.23",
-    x: "2.45",
-    "2": "4.33"
-  },
-  {
-    logo: surebetLogo,
-    bookie: "Surebet",
-    "1": "1.23",
-    x: "2.45",
-    "2": "4.33"
-  }
-];
+const buildDataTable = (
+  bet9jaOdds,
+  merryBetOdds,
+  surebetOdds,
+  betwayOdds,
+  sportybetOdds,
+  nairabetOdds,
+  _1960betOdds,
+  betkingOdds
+) => {
+  return [
+    {
+      logo: nairabetLogo,
+      bookie: "Nairabet",
+      1: nairabetOdds ? nairabetOdds["1X"] : "--.--",
+      x: nairabetOdds ? nairabetOdds.X2 : "--.--",
+      2: nairabetOdds ? nairabetOdds["12"] : "--.--"
+    },
+    {
+      logo: bet9jaLogo,
+      bookie: "Bet9ja",
+      1: bet9jaOdds ? bet9jaOdds["1X"] : "--.--",
+      x: bet9jaOdds ? bet9jaOdds.X2 : "--.--",
+      2: bet9jaOdds ? bet9jaOdds["12"] : "--.--"
+    },
+    {
+      logo: _1960betLogo,
+      bookie: "1960Bet",
+      1: _1960betOdds ? _1960betOdds["1X"] : "--.--",
+      x: _1960betOdds ? _1960betOdds.X2 : "--.--",
+      2: _1960betOdds ? _1960betOdds["12"] : "--.--"
+    },
+    {
+      logo: betWayLogo,
+      bookie: "Betway",
+      1: betwayOdds ? betwayOdds["1X"] : "--.--",
+      x: betwayOdds ? betwayOdds.X2 : "--.--",
+      2: betwayOdds ? betwayOdds["12"] : "--.--"
+    },
+    {
+      logo: betKingLogo,
+      bookie: "Betking",
+      1: betkingOdds ? betkingOdds["1X"] : "--.--",
+      x: betkingOdds ? betkingOdds.X2 : "--.--",
+      2: betkingOdds ? betkingOdds["12"] : "--.--"
+    },
+    {
+      logo: sportybetLogo,
+      bookie: "SportyBet",
+      1: sportybetOdds ? sportybetOdds["1X"] : "--.--",
+      x: sportybetOdds ? sportybetOdds.X2 : "--.--",
+      2: sportybetOdds ? sportybetOdds["12"] : "--.--"
+    },
+    {
+      logo: surebetLogo,
+      bookie: "Surebet",
+      1: surebetOdds ? surebetOdds["1X"] : "--.--",
+      x: surebetOdds ? surebetOdds.X2 : "--.--",
+      2: surebetOdds ? surebetOdds["12"] : "--.--"
+    },
+    {
+      logo: merrybetLogo,
+      bookie: "Merrybet",
+      1: merryBetOdds ? merryBetOdds["1X"] : "--.--",
+      x: merryBetOdds ? merryBetOdds.X2 : "--.--",
+      2: merryBetOdds ? merryBetOdds["12"] : "--.--"
+    }
+  ];
+};
+
+export default buildDataTable;

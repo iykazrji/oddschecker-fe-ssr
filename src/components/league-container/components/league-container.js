@@ -44,25 +44,67 @@ const LeagueGamesWrapper = Styled.div`
     height: auto;
 `;
 
-const RenderGameCards = gamesObj => {
-  const gamesIndex = Object.keys(gamesObj);
-  return gamesIndex.map((key, index) => {
-    return <GameCard key={key} game={gamesObj[key]} isEven={index % 2 === 0} />;
+const GamesUnavailableMessageContainer = Styled.div`
+  width: 100%;
+  display: flex;
+  min-height: 200px;
+  justify-content: center;
+  align-items: center;
+  > p {
+    font-size: 1.8rem;
+    text-align: center;
+    color: rgba(10, 10, 10, 0.3);
+    font-weight: 800;
+  }
+`;
+
+const RenderGameCards = (gamesArr, league) => {
+  return gamesArr.map((game, index) => {
+    return (
+      <GameCard
+        key={index}
+        game={game}
+        league={league}
+        isEven={index % 2 === 0}
+      />
+    );
   });
 };
 
 const LeagueContainer = ({ leagueData }) => {
+  const res = Object.keys(leagueData).map(key => {
+    return leagueData[key];
+  });
+
+  let league = "";
+  switch (res[0].league) {
+    case "European League":
+      league = "eu";
+      break;
+    case "Major League Soccer":
+      league = "mls";
+      break;
+    default:
+      league = "epl";
+  }
+  console.log(res);
   return (
     <LeagueContainerWrapper>
       <LeagueNameTitleContainer flexDirection="row">
         <LeagueTitle width={[1, 1, 4 / 12, 3 / 12]}>
-          {leagueData.title || `English Premier League`}
+          {res[0].league || `English Premier League`}
         </LeagueTitle>
         <LeagueTitleLine width={[0, 0, 8 / 12, 9 / 12]} />
       </LeagueNameTitleContainer>
 
       <LeagueGamesWrapper>
-        {RenderGameCards(leagueData.games)}
+        {res[0].marketCount > 0 ? (
+          RenderGameCards(res[0].market, league)
+        ) : (
+          <GamesUnavailableMessageContainer>
+            <p>No Games available for this competition</p>
+          </GamesUnavailableMessageContainer>
+        )}
       </LeagueGamesWrapper>
     </LeagueContainerWrapper>
   );

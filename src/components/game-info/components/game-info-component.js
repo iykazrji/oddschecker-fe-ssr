@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 /* eslint-disable no-underscore-dangle */
 import React, { useState } from "react";
 import Router from "next/router";
@@ -386,7 +387,20 @@ const _totalGoalsTableColumns = [
 ];
 
 // GameInfoComponent...
-const GameInfoComponent = ({ gameId }) => {
+const GameInfoComponent = ({
+  gameId,
+  bet9jaData,
+  merrybetData,
+  surebetData,
+  betwayData,
+  sportybetData,
+  nairabetData,
+  _1960betData,
+  betkingData
+}) => {
+  console.log(gameId);
+  console.log("bet9jaData", bet9jaData);
+
   const gameObj = _.chain(_mockLeagueOddsData)
     .map(league => {
       return _.find(league.games, game => {
@@ -407,12 +421,33 @@ const GameInfoComponent = ({ gameId }) => {
     "1st Half Result"
   ];
 
+  console.log("Surebet odds: ", betkingData[0].odds);
+
   // Decleare parts of state...
   const [selectedMarket, setSelectedMarket] = useState(dropdownOptions[0]);
-  const [selectedOddsData, setSelectedOddsData] = useState(_x12OddsData);
+  const [selectedOddsData, setSelectedOddsData] = useState(
+    _x12OddsData(
+      bet9jaData ? (bet9jaData[0] ? bet9jaData[0].odds : null) : null,
+      merrybetData ? (merrybetData[0] ? merrybetData[0].odds : null) : null,
+      surebetData ? (surebetData[0] ? surebetData[0].odds : null) : null,
+      betwayData ? (betwayData[0] ? betwayData[0].odds : null) : null,
+      sportybetData ? (sportybetData[0] ? sportybetData[0].odds : null) : null,
+      nairabetData ? (nairabetData[0] ? nairabetData[0].odds : null) : null,
+      _1960betData ? (_1960betData[0] ? _1960betData[0].odds : null) : null,
+      betkingData ? (betkingData[0] ? betkingData[0].odds : null) : null
+    )
+  );
   const [selectedOddsTableColumns, setSelectedOddsTableColumns] = useState(
     _x12tableColumns
   );
+
+  const getSelectedGameDetails = (id, market) => {
+    console.log("Market: ", market);
+    console.log("Id: ", id);
+    return market.filter(game => {
+      return game.eventID.localeCompare(id) === 0;
+    });
+  };
 
   const onSelectMarket = option => {
     setSelectedMarket(option);
@@ -420,27 +455,162 @@ const GameInfoComponent = ({ gameId }) => {
     // Set Oddsdata & Table Column values...
     switch (option.value) {
       case "1X2":
-        setSelectedOddsData(_x12OddsData);
+        setSelectedOddsData(
+          _x12OddsData(
+            bet9jaData ? (bet9jaData[0] ? bet9jaData[0].odds : null) : null,
+            merrybetData
+              ? merrybetData[0]
+                ? merrybetData[0].odds
+                : null
+              : null,
+            surebetData ? (surebetData[0] ? surebetData[0].odds : null) : null,
+            betwayData ? (betwayData[0] ? betwayData[0].odds : null) : null,
+            sportybetData
+              ? sportybetData[0]
+                ? sportybetData[0].odds
+                : null
+              : null,
+            nairabetData
+              ? nairabetData[0]
+                ? nairabetData[0].odds
+                : null
+              : null,
+            _1960betData
+              ? _1960betData[0]
+                ? _1960betData[0].odds
+                : null
+              : null,
+            betkingData ? (betkingData[0] ? betkingData[0].odds : null) : null
+          )
+        );
         setSelectedOddsTableColumns(_x12tableColumns);
         break;
 
       case "Both Teams to Score":
-        setSelectedOddsData(_bothTeamsToScoreOddsData);
+        setSelectedOddsData(
+          _bothTeamsToScoreOddsData(
+            bet9jaData ? (bet9jaData[0] ? bet9jaData[0].odds : null) : null,
+            merrybetData
+              ? merrybetData[0]
+                ? merrybetData[0].odds
+                : null
+              : null,
+            surebetData ? (surebetData[0] ? surebetData[0].odds : null) : null,
+            betwayData ? (betwayData[0] ? betwayData[0].odds : null) : null,
+            sportybetData
+              ? sportybetData[0]
+                ? sportybetData[0].odds
+                : null
+              : null,
+            nairabetData
+              ? nairabetData[0]
+                ? nairabetData[0].odds
+                : null
+              : null,
+            _1960betData
+              ? _1960betData[0]
+                ? _1960betData[0].odds
+                : null
+              : null,
+            betkingData ? (betkingData[0] ? betkingData[0].odds : null) : null
+          )
+        );
         setSelectedOddsTableColumns(_bothTeamScoreTableColumns);
         break;
 
       case "Double Chance":
-        setSelectedOddsData(_doubleChanceOddsData);
+        setSelectedOddsData(
+          _doubleChanceOddsData(
+            bet9jaData ? (bet9jaData[0] ? bet9jaData[0].odds : null) : null,
+            merrybetData
+              ? merrybetData[0]
+                ? merrybetData[0].odds
+                : null
+              : null,
+            surebetData ? (surebetData[0] ? surebetData[0].odds : null) : null,
+            betwayData ? (betwayData[0] ? betwayData[0].odds : null) : null,
+            sportybetData
+              ? sportybetData[0]
+                ? sportybetData[0].odds
+                : null
+              : null,
+            nairabetData
+              ? nairabetData[0]
+                ? nairabetData[0].odds
+                : null
+              : null,
+            _1960betData
+              ? _1960betData[0]
+                ? _1960betData[0].odds
+                : null
+              : null,
+            betkingData ? (betkingData[0] ? betkingData[0].odds : null) : null
+          )
+        );
         setSelectedOddsTableColumns(_doubleChanceTableColumns);
         break;
 
       case "Total Goals: Under / Over":
-        setSelectedOddsData(_totalGoalsOddsData);
+        setSelectedOddsData(
+          _totalGoalsOddsData(
+            bet9jaData ? (bet9jaData[0] ? bet9jaData[0].odds : null) : null,
+            merrybetData
+              ? merrybetData[0]
+                ? merrybetData[0].odds
+                : null
+              : null,
+            surebetData ? (surebetData[0] ? surebetData[0].odds : null) : null,
+            betwayData ? (betwayData[0] ? betwayData[0].odds : null) : null,
+            sportybetData
+              ? sportybetData[0]
+                ? sportybetData[0].odds
+                : null
+              : null,
+            nairabetData
+              ? nairabetData[0]
+                ? nairabetData[0].odds
+                : null
+              : null,
+            _1960betData
+              ? _1960betData[0]
+                ? _1960betData[0].odds
+                : null
+              : null,
+            betkingData ? (betkingData[0] ? betkingData[0].odds : null) : null
+          )
+        );
         setSelectedOddsTableColumns(_totalGoalsTableColumns);
         break;
 
       case "1st Half Result":
-        setSelectedOddsData(_1stHalfResultOddsData);
+        setSelectedOddsData(
+          _1stHalfResultOddsData(
+            bet9jaData ? (bet9jaData[0] ? bet9jaData[0].odds : null) : null,
+            merrybetData
+              ? merrybetData[0]
+                ? merrybetData[0].odds
+                : null
+              : null,
+            surebetData ? (surebetData[0] ? surebetData[0].odds : null) : null,
+            betwayData ? (betwayData[0] ? betwayData[0].odds : null) : null,
+            sportybetData
+              ? sportybetData[0]
+                ? sportybetData[0].odds
+                : null
+              : null,
+            nairabetData
+              ? nairabetData[0]
+                ? nairabetData[0].odds
+                : null
+              : null,
+            _1960betData
+              ? _1960betData[0]
+                ? _1960betData[0].odds
+                : null
+              : null,
+            betkingData ? (betkingData[0] ? betkingData[0].odds : null) : null
+          )
+        );
         setSelectedOddsTableColumns(_1stHalfResultTableColumns);
         break;
 
@@ -448,6 +618,14 @@ const GameInfoComponent = ({ gameId }) => {
         break;
     }
   };
+
+  const game = getSelectedGameDetails(gameId, merrybetData);
+
+  const teams = game[0] ? game[0].event.split("-", 2) : null;
+  const team1 = teams ? teams[0] || "Team 1" : "Team 1";
+  const team2 = teams ? teams[1] || "Team 2" : "Team 2";
+
+  console.log("Game details: ", game);
 
   return (
     <GameComponentWrapper className="game-info-wrapper">
@@ -461,12 +639,22 @@ const GameInfoComponent = ({ gameId }) => {
             px={["0rem", "0rem", "1.5rem", "1.5rem"]}
             mx="auto">
             <GameInfoHeadingContent>
-              <TeamInfoContainer>{gameObj[0].team1.name}</TeamInfoContainer>
+              <TeamInfoContainer>{team1}</TeamInfoContainer>
               <TeamInfoContainer px={["3rem"]}>vs</TeamInfoContainer>
-              <TeamInfoContainer>{gameObj[0].team2.name}</TeamInfoContainer>
+              <TeamInfoContainer>{team2}</TeamInfoContainer>
             </GameInfoHeadingContent>
-            <GameDateContainer>{`${gameObj[0].time.date} / ${
-              gameObj[0].time.time
+            <GameDateContainer>{`${
+              game
+                ? game[0]
+                  ? game[0].date
+                  : "Date not available"
+                : "Date not available"
+            } / ${
+              game
+                ? game[0]
+                  ? game[0].time
+                  : "Time not avaialable"
+                : "Time not available"
             }`}</GameDateContainer>
           </GameInfoContentHeadingContent>
           <GameInfoCloseContainer width={[1 / 12]}>
@@ -480,6 +668,7 @@ const GameInfoComponent = ({ gameId }) => {
             </CloseButtonWrapper>
           </GameInfoCloseContainer>
         </GameInfoContentHeadingWrapper>
+
         <MarketControlsContainer
           justifyContent="center"
           alignItems="center"
@@ -504,24 +693,26 @@ const GameInfoComponent = ({ gameId }) => {
             />
           </MarketDropdownWrapper>
         </MarketControlsContainer>
-        {/* Bookies Table */}
-        <BookiesTableWrapper>
-          <StyledTable
-            data={selectedOddsData}
-            columns={selectedOddsTableColumns}
-            loading={false}
-            showPagination={false}
-            resizable={false}
-            minRows={selectedOddsData.length}
-          />
-          <TableSubtextWrapper>
-            <p>
-              Odds shown here come direct from online bookmakers. Please check
-              all aspects of your bets before making a placement.{" "}
-              <a href="/">More Info</a>
-            </p>
-          </TableSubtextWrapper>
-        </BookiesTableWrapper>
+
+        {
+          <BookiesTableWrapper>
+            <StyledTable
+              data={selectedOddsData}
+              columns={selectedOddsTableColumns}
+              loading={false}
+              showPagination={false}
+              resizable={false}
+              minRows={selectedOddsData.length}
+            />
+            <TableSubtextWrapper>
+              <p>
+                Odds shown here come direct from online bookmakers. Please check
+                all aspects of your bets before making a placement.{" "}
+                <a href="/">More Info</a>
+              </p>
+            </TableSubtextWrapper>
+          </BookiesTableWrapper>
+        }
       </GameInfoContentContainer>
     </GameComponentWrapper>
   );
