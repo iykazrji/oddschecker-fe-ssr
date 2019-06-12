@@ -23,7 +23,6 @@ import closeIcon from "@/resources/icons/close.svg";
 const GameComponentWrapper = Styled.div`
     width: 100%;
     display: flex;
-    border-left: 1px solid rgba(10, 10, 10, 0.09);
     height: 100%;
     @media screen and (max-width: 738px){
       position: absolute;

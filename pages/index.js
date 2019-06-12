@@ -88,6 +88,12 @@ const GameInfoComponentContainer = Styled.div`
   width: 100%;
   height: 100%;
   position: relative;
+  @media screen and (max-width: 738px){
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    border-left: none;
+  }
 `;
 
 const GameInfoComponentLoadingContainer = Styled.div`
@@ -142,7 +148,6 @@ class Home extends React.Component {
       // Get all European Games
       const europeanGames = await getAllGamesInfo("merrybet", "eu");
       const mlsGames = await getAllGamesInfo("merrybet", "mls");
-      console.log(europeanGames.data);
 
       // The response object contains data that would be returned
       // From our GetInitialProps method...

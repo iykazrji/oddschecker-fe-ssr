@@ -44323,7 +44323,7 @@ var AdBannerImg = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].img
 var GameInfoComponentContainer = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].div.withConfig({
   displayName: "pages__GameInfoComponentContainer",
   componentId: "u8s298-7"
-})(["width:100%;height:100%;position:relative;"]);
+})(["width:100%;height:100%;position:relative;@media screen and (max-width:738px){position:absolute;z-index:3;width:100%;border-left:none;}"]);
 var GameInfoComponentLoadingContainer = styled_components__WEBPACK_IMPORTED_MODULE_12__["default"].div.withConfig({
   displayName: "pages__GameInfoComponentLoadingContainer",
   componentId: "u8s298-8"
@@ -44502,58 +44502,57 @@ function (_React$Component) {
 
               case 7:
                 mlsGames = _context.sent;
-                console.log(europeanGames.data); // The response object contains data that would be returned
+                // The response object contains data that would be returned
                 // From our GetInitialProps method...
-
                 responseObj = {
                   europeanGames: europeanGames.data || null,
                   mlsGames: mlsGames.data || null
                 };
 
                 if (!query) {
-                  _context.next = 36;
+                  _context.next = 35;
                   break;
                 }
 
-                _context.next = 13;
+                _context.next = 12;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBet9jaGamesInfo"])("bet9ja", query.league);
 
-              case 13:
+              case 12:
                 bet9jaData = _context.sent;
-                _context.next = 16;
+                _context.next = 15;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getMerryBetGamesInfo"])(query.league);
 
-              case 16:
+              case 15:
                 merrybetData = _context.sent;
-                _context.next = 19;
+                _context.next = 18;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSureBetGamesInfo"])(query.league);
 
-              case 19:
+              case 18:
                 surebetData = _context.sent;
-                _context.next = 22;
+                _context.next = 21;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetWayGamesInfo"])(query.league);
 
-              case 22:
+              case 21:
                 betwayData = _context.sent;
-                _context.next = 25;
+                _context.next = 24;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSportyBetGamesInfo"])(query.league);
 
-              case 25:
+              case 24:
                 sportybetData = _context.sent;
-                _context.next = 28;
+                _context.next = 27;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getNairaBetGamesInfo"])(query.league);
 
-              case 28:
+              case 27:
                 nairabetData = _context.sent;
-                _context.next = 31;
+                _context.next = 30;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["get1960BetGamesInfo"])(query.league);
 
-              case 31:
+              case 30:
                 _1960betData = _context.sent;
-                _context.next = 34;
+                _context.next = 33;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetKingGamesInfo"])(query.league);
 
-              case 34:
+              case 33:
                 betkingData = _context.sent;
                 responseObj = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, responseObj, {
                   query: query,
@@ -44568,21 +44567,21 @@ function (_React$Component) {
                   betkingData: betkingData.data
                 });
 
-              case 36:
+              case 35:
                 return _context.abrupt("return", responseObj);
 
-              case 39:
-                _context.prev = 39;
+              case 38:
+                _context.prev = 38;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0);
                 return _context.abrupt("return", _context.t0);
 
-              case 43:
+              case 42:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 39]]);
+        }, _callee, null, [[1, 38]]);
       }));
 
       function getInitialProps(_x) {
@@ -45158,7 +45157,7 @@ __webpack_require__.r(__webpack_exports__);
 var GameComponentWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "game-info-component__GameComponentWrapper",
   componentId: "wqowvf-0"
-})(["width:100%;display:flex;border-left:1px solid rgba(10,10,10,0.09);height:100%;@media screen and (max-width:738px){position:absolute;z-index:3;width:100%;border-left:none;}"]);
+})(["width:100%;display:flex;height:100%;@media screen and (max-width:738px){position:absolute;z-index:3;width:100%;border-left:none;}"]);
 var GameInfoContentContainer = styled_components__WEBPACK_IMPORTED_MODULE_3__["default"].div.withConfig({
   displayName: "game-info-component__GameInfoContentContainer",
   componentId: "wqowvf-1"
