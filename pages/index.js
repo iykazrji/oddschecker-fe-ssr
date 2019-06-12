@@ -1,9 +1,11 @@
+/* eslint-disable react/destructuring-assignment */
 /* eslint-disable no-underscore-dangle */
 import React, { Fragment } from "react";
 import Head from "next/head";
 import Styled from "styled-components";
 import { Flex, Box } from "rebass";
 import AdSense from "react-adsense";
+import { Router } from "../routes";
 
 // Get components
 import Navigation, {
@@ -18,6 +20,9 @@ import Footer from "../src/components/footer/components";
 // Get Ad Banners
 import ad1 from "@/resources/images/ad-banners/ad1.png";
 import ad2 from "@/resources/images/ad-banners/ad2.png";
+
+// Loading Icon
+import LoadingIcon from "@/resources/icons/loading.svg";
 
 // Get Games and Odds Data
 import {
@@ -79,6 +84,34 @@ const AdBannerImg = Styled.img`
   align-self: flex-start;
 `;
 
+const GameInfoComponentContainer = Styled.div`
+  width: 100%;
+  height: 100%;
+  position: relative;
+`;
+
+const GameInfoComponentLoadingContainer = Styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  border-left: 1px solid rgba(10, 10, 10, 0.09);
+`;
+
+const LoadingIconContainer = Styled.div`
+  width: 7rem;
+  height: 7rem;
+  margin: 0 auto;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  > img {
+    max-width: 100%;
+  }
+`;
+
 const filterForSelectedGame = (market, id) => {
   return market.filter(game => {
     if (game && game.eventID) {
@@ -100,6 +133,10 @@ const renderLeagues = leagueData => {
 };
 
 class Home extends React.Component {
+  state = {
+    gameInfoLoading: false
+  };
+
   static async getInitialProps({ query }) {
     try {
       // Get all European Games
@@ -143,6 +180,24 @@ class Home extends React.Component {
       console.log(err);
       return err;
     }
+  }
+
+  componentDidMount() {
+    Router.events.on("routeChangeStart", url => {
+      let urlArr = url.split("/");
+      if (urlArr[1] === "game") {
+        this.setState({
+          gameInfoLoading: true
+        });
+      }
+      console.log("App is changing to: ", urlArr);
+    });
+
+    Router.events.on("routeChangeComplete", () => {
+      this.setState({
+        gameInfoLoading: false
+      });
+    });
   }
 
   render() {
@@ -196,50 +251,63 @@ class Home extends React.Component {
                 <LeagueContentContainer>
                   {renderLeagues(leagues)}
                 </LeagueContentContainer>
-                {id ? (
-                  <GameInfoComponent
-                    gameId={id}
-                    bet9jaData={
-                      bet9jaData
-                        ? filterForSelectedGame(bet9jaData.market, id)
-                        : null
-                    }
-                    merrybetData={
-                      merrybetData
-                        ? filterForSelectedGame(merrybetData.market, id)
-                        : null
-                    }
-                    surebetData={
-                      surebetData
-                        ? filterForSelectedGame(surebetData.market, id)
-                        : null
-                    }
-                    betwayData={
-                      betwayData
-                        ? filterForSelectedGame(betwayData.market, id)
-                        : null
-                    }
-                    sportybetData={
-                      sportybetData
-                        ? filterForSelectedGame(sportybetData.market, id)
-                        : null
-                    }
-                    nairabetData={
-                      nairabetData
-                        ? filterForSelectedGame(nairabetData.market, id)
-                        : null
-                    }
-                    _1960betData={
-                      _1960betData
-                        ? filterForSelectedGame(_1960betData.market, id)
-                        : null
-                    }
-                    betkingData={
-                      betkingData
-                        ? filterForSelectedGame(betkingData.market, id)
-                        : null
-                    }
-                  />
+                {this.state.gameInfoLoading || id ? (
+                  <GameInfoComponentContainer>
+                    <Fragment>
+                      {id ? (
+                        <GameInfoComponent
+                          gameId={id}
+                          bet9jaData={
+                            bet9jaData
+                              ? filterForSelectedGame(bet9jaData.market, id)
+                              : null
+                          }
+                          merrybetData={
+                            merrybetData
+                              ? filterForSelectedGame(merrybetData.market, id)
+                              : null
+                          }
+                          surebetData={
+                            surebetData
+                              ? filterForSelectedGame(surebetData.market, id)
+                              : null
+                          }
+                          betwayData={
+                            betwayData
+                              ? filterForSelectedGame(betwayData.market, id)
+                              : null
+                          }
+                          sportybetData={
+                            sportybetData
+                              ? filterForSelectedGame(sportybetData.market, id)
+                              : null
+                          }
+                          nairabetData={
+                            nairabetData
+                              ? filterForSelectedGame(nairabetData.market, id)
+                              : null
+                          }
+                          _1960betData={
+                            _1960betData
+                              ? filterForSelectedGame(_1960betData.market, id)
+                              : null
+                          }
+                          betkingData={
+                            betkingData
+                              ? filterForSelectedGame(betkingData.market, id)
+                              : null
+                          }
+                        />
+                      ) : null}
+                      {this.state.gameInfoLoading ? (
+                        <GameInfoComponentLoadingContainer>
+                          <LoadingIconContainer>
+                            <img src={LoadingIcon} alt="loading indicator" />
+                          </LoadingIconContainer>
+                        </GameInfoComponentLoadingContainer>
+                      ) : null}
+                    </Fragment>
+                  </GameInfoComponentContainer>
                 ) : null}
               </GamesContentContainer>
             </MainGamesContentContainerBox>

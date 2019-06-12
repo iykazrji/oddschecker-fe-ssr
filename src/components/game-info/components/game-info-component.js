@@ -21,7 +21,7 @@ import closeIcon from "@/resources/icons/close.svg";
 
 // Declare styled components...
 const GameComponentWrapper = Styled.div`
-    width: 60%;
+    width: 100%;
     display: flex;
     border-left: 1px solid rgba(10, 10, 10, 0.09);
     height: 100%;
@@ -398,9 +398,6 @@ const GameInfoComponent = ({
   _1960betData,
   betkingData
 }) => {
-  console.log(gameId);
-  console.log("bet9jaData", bet9jaData);
-
   const gameObj = _.chain(_mockLeagueOddsData)
     .map(league => {
       return _.find(league.games, game => {
@@ -420,8 +417,6 @@ const GameInfoComponent = ({
     "Total Goals: Under / Over",
     "1st Half Result"
   ];
-
-  console.log("Surebet odds: ", betkingData[0].odds);
 
   // Decleare parts of state...
   const [selectedMarket, setSelectedMarket] = useState(dropdownOptions[0]);
@@ -624,8 +619,6 @@ const GameInfoComponent = ({
   const teams = game[0] ? game[0].event.split("-", 2) : null;
   const team1 = teams ? teams[0] || "Team 1" : "Team 1";
   const team2 = teams ? teams[1] || "Team 2" : "Team 2";
-
-  console.log("Game details: ", game);
 
   return (
     <GameComponentWrapper className="game-info-wrapper">
