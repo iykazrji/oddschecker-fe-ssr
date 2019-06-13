@@ -18,7 +18,6 @@ export const getAllGamesInfo = async (website, competition) => {
       const response = await axios.get(
         `${urls.main_base_url}/${website}/${competition}`
       );
-      console.log(response);
       return response;
     }
 
@@ -45,7 +44,7 @@ export const getBet9jaGamesInfo = async competition => {
       return response;
     }
 
-    // This is thrown if the necessary website or competition isn't provided
+    // This is thrown if the necessary website or competition isn't provideds
     throw new InvalidArgumentsError(
       "Website and Competition info not provided"
     );

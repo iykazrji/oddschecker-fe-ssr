@@ -195,7 +195,6 @@ class Home extends React.Component {
           gameInfoLoading: true
         });
       }
-      console.log("App is changing to: ", urlArr);
     });
 
     Router.events.on("routeChangeComplete", () => {
@@ -219,7 +218,6 @@ class Home extends React.Component {
       _1960betData,
       betkingData
     } = this.props;
-    console.log(this.props);
 
     const leagues = [{ mlsGames }, { europeanGames }];
     return (

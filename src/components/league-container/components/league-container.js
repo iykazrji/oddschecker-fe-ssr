@@ -77,18 +77,22 @@ const LeagueContainer = ({ leagueData }) => {
   });
 
   let league = "";
-  switch (res[0].league) {
-    case "European League":
-      league = "eu";
-      break;
-    case "Major League Soccer":
-      league = "mls";
-      break;
-    default:
-      league = "epl";
+
+  if (res[0]) {
+    switch (res[0].league) {
+      case "European League":
+        league = "eu";
+        break;
+      case "Major League Soccer":
+        league = "mls";
+        break;
+      default:
+        league = "epl";
+    }
   }
+
   console.log(res);
-  return (
+  return res[0] ? (
     <LeagueContainerWrapper>
       <LeagueNameTitleContainer flexDirection="row">
         <LeagueTitle width={[1, 1, 4 / 12, 3 / 12]}>
@@ -107,7 +111,7 @@ const LeagueContainer = ({ leagueData }) => {
         )}
       </LeagueGamesWrapper>
     </LeagueContainerWrapper>
-  );
+  ) : null;
 };
 
 export default LeagueContainer;

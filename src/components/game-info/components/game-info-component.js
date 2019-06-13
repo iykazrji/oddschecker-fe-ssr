@@ -1,6 +1,6 @@
 /* eslint-disable no-nested-ternary */
 /* eslint-disable no-underscore-dangle */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Styled from "styled-components";
 import _ from "lodash";
@@ -24,12 +24,6 @@ const GameComponentWrapper = Styled.div`
     width: 100%;
     display: flex;
     height: 100%;
-    @media screen and (max-width: 738px){
-      position: absolute;
-      z-index: 3;
-      width: 100%;
-      border-left: none;
-    }
 `;
 
 const GameInfoContentContainer = Styled.div`
@@ -397,24 +391,13 @@ const GameInfoComponent = ({
   _1960betData,
   betkingData
 }) => {
-  const gameObj = _.chain(_mockLeagueOddsData)
-    .map(league => {
-      return _.find(league.games, game => {
-        return game.id === gameId;
-      });
-    })
-    .filter(value => {
-      return value;
-    })
-    .value();
-
   // market odds dropdown options
   const dropdownOptions = [
-    "1X2",
-    "Both Teams to Score",
-    "Double Chance",
-    "Total Goals: Under / Over",
-    "1st Half Result"
+    { value: "1X2", label: "1X2" },
+    { value: "Both Teams to Score", label: "Both Teams to Score" },
+    { value: "Double Chance", label: "Double Chance" },
+    { value: "Total Goals: Under / Over", label: "Total Goals: Under / Over" },
+    { value: "1st Half Result", label: "1st Half Result" }
   ];
 
   // Decleare parts of state...
@@ -436,8 +419,6 @@ const GameInfoComponent = ({
   );
 
   const getSelectedGameDetails = (id, market) => {
-    console.log("Market: ", market);
-    console.log("Id: ", id);
     return market.filter(game => {
       return game.eventID.localeCompare(id) === 0;
     });
@@ -445,9 +426,19 @@ const GameInfoComponent = ({
 
   const onSelectMarket = option => {
     setSelectedMarket(option);
-
     // Set Oddsdata & Table Column values...
-    switch (option.value) {
+  };
+
+  const game = getSelectedGameDetails(gameId, merrybetData);
+
+  const teams = game[0] ? game[0].event.split("-", 2) : null;
+  const team1 = teams ? teams[0] || "Team 1" : "Team 1";
+  const team2 = teams ? teams[1] || "Team 2" : "Team 2";
+
+  // Render new data when component mounts
+
+  const buildOddsDataTable = market => {
+    switch (market.value) {
       case "1X2":
         setSelectedOddsData(
           _x12OddsData(
@@ -613,11 +604,9 @@ const GameInfoComponent = ({
     }
   };
 
-  const game = getSelectedGameDetails(gameId, merrybetData);
-
-  const teams = game[0] ? game[0].event.split("-", 2) : null;
-  const team1 = teams ? teams[0] || "Team 1" : "Team 1";
-  const team2 = teams ? teams[1] || "Team 2" : "Team 2";
+  useEffect(() => {
+    buildOddsDataTable(selectedMarket);
+  });
 
   return (
     <GameComponentWrapper className="game-info-wrapper">

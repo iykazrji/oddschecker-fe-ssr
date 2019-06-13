@@ -207,7 +207,7 @@ function () {
             _context.prev = 0;
 
             if (!(website && competition)) {
-              _context.next = 7;
+              _context.next = 6;
               break;
             }
 
@@ -216,24 +216,23 @@ function () {
 
           case 4:
             response = _context.sent;
-            console.log(response);
             return _context.abrupt("return", response);
 
-          case 7:
+          case 6:
             throw new _error_handler__WEBPACK_IMPORTED_MODULE_3__["InvalidArgumentsError"]("Website and Competition info not provided");
 
-          case 10:
-            _context.prev = 10;
+          case 9:
+            _context.prev = 9;
             _context.t0 = _context["catch"](0);
             console.log(_context.t0);
             return _context.abrupt("return", _context.t0);
 
-          case 14:
+          case 13:
           case "end":
             return _context.stop();
         }
       }
-    }, _callee, null, [[0, 10]]);
+    }, _callee, null, [[0, 9]]);
   }));
 
   return function getAllGamesInfo(_x, _x2) {
@@ -2117,8 +2116,6 @@ function (_React$Component) {
             gameInfoLoading: true
           });
         }
-
-        console.log("App is changing to: ", urlArr);
       });
       _routes__WEBPACK_IMPORTED_MODULE_15__["Router"].events.on("routeChangeComplete", function () {
         _this2.setState({
@@ -2141,7 +2138,6 @@ function (_React$Component) {
           nairabetData = _this$props.nairabetData,
           _1960betData = _this$props._1960betData,
           betkingData = _this$props.betkingData;
-      console.log(this.props);
       var leagues = [{
         mlsGames: mlsGames
       }, {
@@ -2883,7 +2879,7 @@ __webpack_require__.r(__webpack_exports__);
 var GameComponentWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "game-info-component__GameComponentWrapper",
   componentId: "wqowvf-0"
-})(["width:100%;display:flex;height:100%;@media screen and (max-width:738px){position:absolute;z-index:3;width:100%;border-left:none;}"]);
+})(["width:100%;display:flex;height:100%;"]);
 var GameInfoContentContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "game-info-component__GameInfoContentContainer",
   componentId: "wqowvf-1"
@@ -3101,17 +3097,23 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
       nairabetData = _ref6.nairabetData,
       _1960betData = _ref6._1960betData,
       betkingData = _ref6.betkingData;
-
-  var gameObj = lodash__WEBPACK_IMPORTED_MODULE_4___default.a.chain(_data_mock_league__WEBPACK_IMPORTED_MODULE_14__["default"]).map(function (league) {
-    return lodash__WEBPACK_IMPORTED_MODULE_4___default.a.find(league.games, function (game) {
-      return game.id === gameId;
-    });
-  }).filter(function (value) {
-    return value;
-  }).value(); // market odds dropdown options
-
-
-  var dropdownOptions = ["1X2", "Both Teams to Score", "Double Chance", "Total Goals: Under / Over", "1st Half Result"]; // Decleare parts of state...
+  // market odds dropdown options
+  var dropdownOptions = [{
+    value: "1X2",
+    label: "1X2"
+  }, {
+    value: "Both Teams to Score",
+    label: "Both Teams to Score"
+  }, {
+    value: "Double Chance",
+    label: "Double Chance"
+  }, {
+    value: "Total Goals: Under / Over",
+    label: "Total Goals: Under / Over"
+  }, {
+    value: "1st Half Result",
+    label: "1st Half Result"
+  }]; // Decleare parts of state...
 
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(dropdownOptions[0]),
       _useState2 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState, 2),
@@ -3129,8 +3131,6 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
       setSelectedOddsTableColumns = _useState6[1];
 
   var getSelectedGameDetails = function getSelectedGameDetails(id, market) {
-    console.log("Market: ", market);
-    console.log("Id: ", id);
     return market.filter(function (game) {
       return game.eventID.localeCompare(id) === 0;
     });
@@ -3138,8 +3138,15 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
 
   var onSelectMarket = function onSelectMarket(option) {
     setSelectedMarket(option); // Set Oddsdata & Table Column values...
+  };
 
-    switch (option.value) {
+  var game = getSelectedGameDetails(gameId, merrybetData);
+  var teams = game[0] ? game[0].event.split("-", 2) : null;
+  var team1 = teams ? teams[0] || "Team 1" : "Team 1";
+  var team2 = teams ? teams[1] || "Team 2" : "Team 2"; // Render new data when component mounts
+
+  var buildOddsDataTable = function buildOddsDataTable(market) {
+    switch (market.value) {
       case "1X2":
         setSelectedOddsData(Object(_data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_10__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
         setSelectedOddsTableColumns(_x12tableColumns);
@@ -3170,10 +3177,9 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
     }
   };
 
-  var game = getSelectedGameDetails(gameId, merrybetData);
-  var teams = game[0] ? game[0].event.split("-", 2) : null;
-  var team1 = teams ? teams[0] || "Team 1" : "Team 1";
-  var team2 = teams ? teams[1] || "Team 2" : "Team 2";
+  Object(react__WEBPACK_IMPORTED_MODULE_1__["useEffect"])(function () {
+    buildOddsDataTable(selectedMarket);
+  });
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GameComponentWrapper, {
     className: "game-info-wrapper"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GameInfoContentContainer, {
@@ -3481,27 +3487,29 @@ var LeagueContainer = function LeagueContainer(_ref) {
 
   var league = "";
 
-  switch (res[0].league) {
-    case "European League":
-      league = "eu";
-      break;
+  if (res[0]) {
+    switch (res[0].league) {
+      case "European League":
+        league = "eu";
+        break;
 
-    case "Major League Soccer":
-      league = "mls";
-      break;
+      case "Major League Soccer":
+        league = "mls";
+        break;
 
-    default:
-      league = "epl";
+      default:
+        league = "epl";
+    }
   }
 
   console.log(res);
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueContainerWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueNameTitleContainer, {
+  return res[0] ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueContainerWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueNameTitleContainer, {
     flexDirection: "row"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueTitle, {
     width: [1, 1, 4 / 12, 3 / 12]
   }, res[0].league || "English Premier League"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueTitleLine, {
     width: [0, 0, 8 / 12, 9 / 12]
-  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueGamesWrapper, null, res[0].marketCount > 0 ? RenderGameCards(res[0].market, league) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GamesUnavailableMessageContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "No Games available for this competition"))));
+  })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueGamesWrapper, null, res[0].marketCount > 0 ? RenderGameCards(res[0].market, league) : react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(GamesUnavailableMessageContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "No Games available for this competition")))) : null;
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (LeagueContainer);
@@ -5183,49 +5191,49 @@ var buildDataTable = function buildDataTable(bet9jaOdds, merryBetOdds, surebetOd
     logo: _resources_icons_company_logos_nairabet_svg__WEBPACK_IMPORTED_MODULE_0___default.a,
     bookie: "Nairabet",
     1: nairabetOdds ? nairabetOdds["1X"] : "--.--",
-    x: nairabetOdds ? nairabetOdds.X2 : "--.--",
+    x: nairabetOdds ? nairabetOdds["2X"] : "--.--",
     2: nairabetOdds ? nairabetOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_bet9ja_svg__WEBPACK_IMPORTED_MODULE_1___default.a,
     bookie: "Bet9ja",
     1: bet9jaOdds ? bet9jaOdds["1X"] : "--.--",
-    x: bet9jaOdds ? bet9jaOdds.X2 : "--.--",
+    x: bet9jaOdds ? bet9jaOdds["2X"] : "--.--",
     2: bet9jaOdds ? bet9jaOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_1960bet_png__WEBPACK_IMPORTED_MODULE_5___default.a,
     bookie: "1960Bet",
     1: _1960betOdds ? _1960betOdds["1X"] : "--.--",
-    x: _1960betOdds ? _1960betOdds.X2 : "--.--",
+    x: _1960betOdds ? _1960betOdds["2X"] : "--.--",
     2: _1960betOdds ? _1960betOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_betway_svg__WEBPACK_IMPORTED_MODULE_2___default.a,
     bookie: "Betway",
     1: betwayOdds ? betwayOdds["1X"] : "--.--",
-    x: betwayOdds ? betwayOdds.X2 : "--.--",
+    x: betwayOdds ? betwayOdds["2X"] : "--.--",
     2: betwayOdds ? betwayOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_betking_logo_svg__WEBPACK_IMPORTED_MODULE_3___default.a,
     bookie: "Betking",
     1: betkingOdds ? betkingOdds["1X"] : "--.--",
-    x: betkingOdds ? betkingOdds.X2 : "--.--",
+    x: betkingOdds ? betkingOdds["2X"] : "--.--",
     2: betkingOdds ? betkingOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_sportybet_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
     bookie: "SportyBet",
     1: sportybetOdds ? sportybetOdds["1X"] : "--.--",
-    x: sportybetOdds ? sportybetOdds.X2 : "--.--",
+    x: sportybetOdds ? sportybetOdds["2X"] : "--.--",
     2: sportybetOdds ? sportybetOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_surebet247_png__WEBPACK_IMPORTED_MODULE_6___default.a,
     bookie: "Surebet",
     1: surebetOdds ? surebetOdds["1X"] : "--.--",
-    x: surebetOdds ? surebetOdds.X2 : "--.--",
+    x: surebetOdds ? surebetOdds["2X"] : "--.--",
     2: surebetOdds ? surebetOdds["12"] : "--.--"
   }, {
     logo: _resources_icons_company_logos_merrybet_png__WEBPACK_IMPORTED_MODULE_7___default.a,
     bookie: "Merrybet",
     1: merryBetOdds ? merryBetOdds["1X"] : "--.--",
-    x: merryBetOdds ? merryBetOdds.X2 : "--.--",
+    x: merryBetOdds ? merryBetOdds["2X"] : "--.--",
     2: merryBetOdds ? merryBetOdds["12"] : "--.--"
   }];
 };
