@@ -2128,6 +2128,7 @@ function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           id = _this$props.id,
+          eplGames = _this$props.eplGames,
           europeanGames = _this$props.europeanGames,
           mlsGames = _this$props.mlsGames,
           bet9jaData = _this$props.bet9jaData,
@@ -2139,10 +2140,13 @@ function (_React$Component) {
           _1960betData = _this$props._1960betData,
           betkingData = _this$props.betkingData;
       var leagues = [{
+        eplGames: eplGames
+      }, {
         mlsGames: mlsGames
       }, {
         europeanGames: europeanGames
       }];
+      console.log("Leagues: ", leagues);
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_11___default.a, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", null, "Oddschecker - Home")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__["CachetteNavigation"], {
         className: "cachette-navigation",
         navComponent: react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -2202,7 +2206,7 @@ function (_React$Component) {
       var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-        var query, europeanGames, mlsGames, responseObj, bet9jaData, merrybetData, surebetData, betwayData, sportybetData, nairabetData, _1960betData, betkingData;
+        var query, eplGames, europeanGames, mlsGames, responseObj, bet9jaData, merrybetData, surebetData, betwayData, sportybetData, nairabetData, _1960betData, betkingData;
 
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -2211,66 +2215,72 @@ function (_React$Component) {
                 query = _ref.query;
                 _context.prev = 1;
                 _context.next = 4;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "eu");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "pl");
 
               case 4:
-                europeanGames = _context.sent;
+                eplGames = _context.sent;
                 _context.next = 7;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "mls");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "eu");
 
               case 7:
+                europeanGames = _context.sent;
+                _context.next = 10;
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "mls");
+
+              case 10:
                 mlsGames = _context.sent;
                 // The response object contains data that would be returned
                 // From our GetInitialProps method...
                 responseObj = {
                   europeanGames: europeanGames.data || null,
-                  mlsGames: mlsGames.data || null
+                  mlsGames: mlsGames.data || null,
+                  eplGames: eplGames.data || null
                 };
 
                 if (!query) {
-                  _context.next = 35;
+                  _context.next = 38;
                   break;
                 }
 
-                _context.next = 12;
+                _context.next = 15;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBet9jaGamesInfo"])("bet9ja", query.league);
 
-              case 12:
+              case 15:
                 bet9jaData = _context.sent;
-                _context.next = 15;
+                _context.next = 18;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getMerryBetGamesInfo"])(query.league);
 
-              case 15:
+              case 18:
                 merrybetData = _context.sent;
-                _context.next = 18;
+                _context.next = 21;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSureBetGamesInfo"])(query.league);
 
-              case 18:
+              case 21:
                 surebetData = _context.sent;
-                _context.next = 21;
+                _context.next = 24;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetWayGamesInfo"])(query.league);
 
-              case 21:
+              case 24:
                 betwayData = _context.sent;
-                _context.next = 24;
+                _context.next = 27;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSportyBetGamesInfo"])(query.league);
 
-              case 24:
+              case 27:
                 sportybetData = _context.sent;
-                _context.next = 27;
+                _context.next = 30;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getNairaBetGamesInfo"])(query.league);
 
-              case 27:
+              case 30:
                 nairabetData = _context.sent;
-                _context.next = 30;
+                _context.next = 33;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["get1960BetGamesInfo"])(query.league);
 
-              case 30:
+              case 33:
                 _1960betData = _context.sent;
-                _context.next = 33;
+                _context.next = 36;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetKingGamesInfo"])(query.league);
 
-              case 33:
+              case 36:
                 betkingData = _context.sent;
                 responseObj = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, responseObj, {
                   query: query,
@@ -2285,21 +2295,21 @@ function (_React$Component) {
                   betkingData: betkingData.data
                 });
 
-              case 35:
+              case 38:
                 return _context.abrupt("return", responseObj);
 
-              case 38:
-                _context.prev = 38;
+              case 41:
+                _context.prev = 41;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0);
                 return _context.abrupt("return", _context.t0);
 
-              case 42:
+              case 45:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 38]]);
+        }, _callee, null, [[1, 41]]);
       }));
 
       function getInitialProps(_x) {
@@ -3489,7 +3499,7 @@ var LeagueContainer = function LeagueContainer(_ref) {
 
   if (res[0]) {
     switch (res[0].league) {
-      case "European League":
+      case "European 2020 Qualifiers":
         league = "eu";
         break;
 
@@ -3497,8 +3507,12 @@ var LeagueContainer = function LeagueContainer(_ref) {
         league = "mls";
         break;
 
+      case "Premier League":
+        league = "pl";
+        break;
+
       default:
-        league = "epl";
+        league = "pl";
     }
   }
 

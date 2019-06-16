@@ -80,14 +80,17 @@ const LeagueContainer = ({ leagueData }) => {
 
   if (res[0]) {
     switch (res[0].league) {
-      case "European League":
+      case "European 2020 Qualifiers":
         league = "eu";
         break;
       case "Major League Soccer":
         league = "mls";
         break;
+      case "Premier League":
+        league = "pl";
+        break;
       default:
-        league = "epl";
+        league = "pl";
     }
   }
 

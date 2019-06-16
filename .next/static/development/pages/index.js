@@ -44406,6 +44406,7 @@ function (_React$Component) {
     value: function render() {
       var _this$props = this.props,
           id = _this$props.id,
+          eplGames = _this$props.eplGames,
           europeanGames = _this$props.europeanGames,
           mlsGames = _this$props.mlsGames,
           bet9jaData = _this$props.bet9jaData,
@@ -44417,10 +44418,13 @@ function (_React$Component) {
           _1960betData = _this$props._1960betData,
           betkingData = _this$props.betkingData;
       var leagues = [{
+        eplGames: eplGames
+      }, {
         mlsGames: mlsGames
       }, {
         europeanGames: europeanGames
       }];
+      console.log("Leagues: ", leagues);
       return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_11___default.a, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", null, "Oddschecker - Home")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__["CachetteNavigation"], {
         className: "cachette-navigation",
         navComponent: react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__["default"], {
@@ -44480,7 +44484,7 @@ function (_React$Component) {
       var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-        var query, europeanGames, mlsGames, responseObj, bet9jaData, merrybetData, surebetData, betwayData, sportybetData, nairabetData, _1960betData, betkingData;
+        var query, eplGames, europeanGames, mlsGames, responseObj, bet9jaData, merrybetData, surebetData, betwayData, sportybetData, nairabetData, _1960betData, betkingData;
 
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -44489,66 +44493,72 @@ function (_React$Component) {
                 query = _ref.query;
                 _context.prev = 1;
                 _context.next = 4;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "eu");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "pl");
 
               case 4:
-                europeanGames = _context.sent;
+                eplGames = _context.sent;
                 _context.next = 7;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "mls");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "eu");
 
               case 7:
+                europeanGames = _context.sent;
+                _context.next = 10;
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "mls");
+
+              case 10:
                 mlsGames = _context.sent;
                 // The response object contains data that would be returned
                 // From our GetInitialProps method...
                 responseObj = {
                   europeanGames: europeanGames.data || null,
-                  mlsGames: mlsGames.data || null
+                  mlsGames: mlsGames.data || null,
+                  eplGames: eplGames.data || null
                 };
 
                 if (!query) {
-                  _context.next = 35;
+                  _context.next = 38;
                   break;
                 }
 
-                _context.next = 12;
+                _context.next = 15;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBet9jaGamesInfo"])("bet9ja", query.league);
 
-              case 12:
+              case 15:
                 bet9jaData = _context.sent;
-                _context.next = 15;
+                _context.next = 18;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getMerryBetGamesInfo"])(query.league);
 
-              case 15:
+              case 18:
                 merrybetData = _context.sent;
-                _context.next = 18;
+                _context.next = 21;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSureBetGamesInfo"])(query.league);
 
-              case 18:
+              case 21:
                 surebetData = _context.sent;
-                _context.next = 21;
+                _context.next = 24;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetWayGamesInfo"])(query.league);
 
-              case 21:
+              case 24:
                 betwayData = _context.sent;
-                _context.next = 24;
+                _context.next = 27;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSportyBetGamesInfo"])(query.league);
 
-              case 24:
+              case 27:
                 sportybetData = _context.sent;
-                _context.next = 27;
+                _context.next = 30;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getNairaBetGamesInfo"])(query.league);
 
-              case 27:
+              case 30:
                 nairabetData = _context.sent;
-                _context.next = 30;
+                _context.next = 33;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["get1960BetGamesInfo"])(query.league);
 
-              case 30:
+              case 33:
                 _1960betData = _context.sent;
-                _context.next = 33;
+                _context.next = 36;
                 return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetKingGamesInfo"])(query.league);
 
-              case 33:
+              case 36:
                 betkingData = _context.sent;
                 responseObj = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, responseObj, {
                   query: query,
@@ -44563,21 +44573,21 @@ function (_React$Component) {
                   betkingData: betkingData.data
                 });
 
-              case 35:
+              case 38:
                 return _context.abrupt("return", responseObj);
 
-              case 38:
-                _context.prev = 38;
+              case 41:
+                _context.prev = 41;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0);
                 return _context.abrupt("return", _context.t0);
 
-              case 42:
+              case 45:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 38]]);
+        }, _callee, null, [[1, 41]]);
       }));
 
       function getInitialProps(_x) {
@@ -45761,7 +45771,7 @@ var LeagueContainer = function LeagueContainer(_ref) {
 
   if (res[0]) {
     switch (res[0].league) {
-      case "European League":
+      case "European 2020 Qualifiers":
         league = "eu";
         break;
 
@@ -45769,8 +45779,12 @@ var LeagueContainer = function LeagueContainer(_ref) {
         league = "mls";
         break;
 
+      case "Premier League":
+        league = "pl";
+        break;
+
       default:
-        league = "epl";
+        league = "pl";
     }
   }
 
@@ -46039,6 +46053,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _resources_icons_menu_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_menu_svg__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/resources/icons/top-games.svg */ "./src/resources/icons/top-games.svg");
 /* harmony import */ var _resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6__);
+var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/navigation/components/fixed-footer-navigation.js";
+
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 /* eslint-disable no-nested-ternary */
@@ -46080,34 +46096,162 @@ var NavigationTextWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["defa
 });
 
 var FixedFooterNavigation = function FixedFooterNavigation() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FooterNavigationContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinksContainer, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FooterNavigationContainer, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 74
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinksContainer, {
     flexDirection: "row",
-    width: ["0.8"]
+    width: ["0.8"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 75
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
-    width: [4 / 12]
+    width: [4 / 12],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 77
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
-    passHref: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    passHref: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 78
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 79
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 80
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_menu_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    alt: "menu icon"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Menu"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
-    width: [4 / 12]
+    alt: "menu icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 81
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 83
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 84
+    },
+    __self: this
+  }, "Menu"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
+    width: [4 / 12],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 91
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
-    passHref: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    passHref: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 92
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 93
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 94
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    alt: "top games icon"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Top Games"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
-    width: [4 / 12]
+    alt: "top games icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 95
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 97
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 98
+    },
+    __self: this
+  }, "Top Games"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
+    width: [4 / 12],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 105
+    },
+    __self: this
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
-    passHref: true
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    passHref: true,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 106
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 107
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 108
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_login_icon_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    alt: "login icon"
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Login")))))));
+    alt: "login icon",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 109
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 111
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 112
+    },
+    __self: this
+  }, "Login")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FixedFooterNavigation);
@@ -47921,7 +48065,7 @@ module.exports = "/_next/static/images/ad2-08088874ab521a1aa6623308525e3b62.png"
 
 /***/ }),
 
-/***/ 1:
+/***/ 0:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fiyk%2FDocuments%2Fsandbox%2Foddschecker-fe-ssr%2Fpages%2Findex.js ***!
   \*********************************************************************************************************************************************/
@@ -47944,5 +48088,5 @@ module.exports = dll_7aff549c98b978433226;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js","styles"]]]);
+},[[0,"static/runtime/webpack.js","styles"]]]);
 //# sourceMappingURL=index.js.map

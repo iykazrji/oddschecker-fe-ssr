@@ -146,6 +146,7 @@ class Home extends React.Component {
   static async getInitialProps({ query }) {
     try {
       // Get all European Games
+      const eplGames = await getAllGamesInfo("merrybet", "pl");
       const europeanGames = await getAllGamesInfo("merrybet", "eu");
       const mlsGames = await getAllGamesInfo("merrybet", "mls");
 
@@ -153,7 +154,8 @@ class Home extends React.Component {
       // From our GetInitialProps method...
       let responseObj = {
         europeanGames: europeanGames.data || null,
-        mlsGames: mlsGames.data || null
+        mlsGames: mlsGames.data || null,
+        eplGames: eplGames.data || null
       };
 
       if (query) {
@@ -189,7 +191,7 @@ class Home extends React.Component {
 
   componentDidMount() {
     Router.events.on("routeChangeStart", url => {
-      let urlArr = url.split("/");
+      const urlArr = url.split("/");
       if (urlArr[1] === "game") {
         this.setState({
           gameInfoLoading: true
@@ -207,6 +209,7 @@ class Home extends React.Component {
   render() {
     const {
       id,
+      eplGames,
       europeanGames,
       mlsGames,
       bet9jaData,
@@ -219,7 +222,9 @@ class Home extends React.Component {
       betkingData
     } = this.props;
 
-    const leagues = [{ mlsGames }, { europeanGames }];
+    const leagues = [{ eplGames }, { mlsGames }, { europeanGames }];
+    console.log("Leagues: ", leagues);
+
     return (
       <Fragment>
         <Head>
