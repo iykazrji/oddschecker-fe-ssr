@@ -3371,6 +3371,23 @@ var checkGamePath = function checkGamePath(game, location) {
 
   return false;
 };
+/**
+ * This Function formats the game date by effectively
+ * removing the year part  of the Date
+ *
+ * @param {string} date
+ * @returns {string} formatted date.
+ */
+
+
+var formatGameDate = function formatGameDate(date) {
+  if (date && date.length > 0) {
+    var dateArr = date.split(" ");
+    return "".concat(dateArr[0], " ").concat(dateArr[1]);
+  }
+
+  return "? ? ?";
+};
 
 var GameCard = function GameCard(_ref) {
   var game = _ref.game,
@@ -3397,8 +3414,9 @@ var GameCard = function GameCard(_ref) {
     passHref: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamContentWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeContainer, {
     flexDirection: "column",
+    alignItems: "center",
     width: ["auto", "auto", "5.5rem", "5.5rem"]
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeWrapper, null, game.time || "19:45"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameDateWrapper, null, game.date || "26 Aug")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team1 || "Team 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VsTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "vs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team2 || "Team 2"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArrowContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeWrapper, null, game.time || "19:45"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameDateWrapper, null, formatGameDate(game.date) || "26 Aug")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team1 || "Team 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VsTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "vs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team2 || "Team 2"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArrowContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_right_arrow_filled_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "Arrow Icon"
   })))));

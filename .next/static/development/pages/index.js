@@ -44727,7 +44727,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/resources/icons/send-button.svg */ "./src/resources/icons/send-button.svg");
 /* harmony import */ var _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9__);
 
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/footer/components/index.js";
 
 /* eslint-disable no-nested-ternary */
 
@@ -44871,23 +44870,13 @@ var RenderSocialMediaIcon = function RenderSocialMediaIcon(_ref) {
     target: "_blank",
     href: {
       linkRef: linkRef
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 162
-    },
-    __self: this
+    }
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIcon, {
     className: "sm-icon",
     alt: {
       altText: altText
     },
-    src: iconSrc,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 163
-    },
-    __self: this
+    src: iconSrc
   }));
 };
 
@@ -44915,188 +44904,68 @@ var Footer = function Footer() {
     setformValue(e.target.value);
   };
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 187
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterMainContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 188
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentContainer, {
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterMainContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentContainer, {
     flexDirection: "row",
     width: [1, 1, 0.9, 0.75],
     mx: "auto",
-    flexWrap: "wrap",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 189
-    },
-    __self: this
+    flexWrap: "wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
     className: "logo-text-container",
     width: [1, 6 / 12, 4 / 12, 4 / 12],
     px: ["5px", "10px", "15px", "20px"],
-    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 194
-    },
-    __self: this
+    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"]
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterLogoH2, {
-    className: "footer-logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: this
-  }, "Oddschecker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterSubtextP, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 200
-    },
-    __self: this
-  }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
+    className: "footer-logo"
+  }, "Oddschecker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterSubtextP, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
     className: "social-media-icons-container",
     width: [1, 6 / 12, 4 / 12, 3 / 12],
     px: ["5px", "10px", "15px", "20px"],
-    mb: ["3rem", "0.5rem", "0.5rem", "0rem"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 207
-    },
-    __self: this
+    mb: ["3rem", "0.5rem", "0.5rem", "0rem"]
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterLogoH2, {
-    className: "footer-logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 212
-    },
-    __self: this
+    className: "footer-logo"
   }, "Follow Us"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsContainer, {
-    flexDirection: "row",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 213
-    },
-    __self: this
+    flexDirection: "row"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 214
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "google.com",
     iconSrc: _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    altText: "google plus icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 215
-    },
-    __self: this
+    altText: "google plus icon"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 222
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "twitter.com",
     iconSrc: _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    altText: "twitter icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 223
-    },
-    __self: this
+    altText: "twitter icon"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 230
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "facebook.com",
     iconSrc: _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    altText: "facebook icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 231
-    },
-    __self: this
+    altText: "facebook icon"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 238
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "instagram.com",
     iconSrc: _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_8___default.a,
-    altText: "instagram icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 239
-    },
-    __self: this
+    altText: "instagram icon"
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
     className: "logo-text-container",
     width: [1, 1, 4 / 12, 4 / 12],
     px: ["2.5px", "2.5px", "5px", "5px"],
-    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 248
-    },
-    __self: this
+    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"]
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterLogoH2, {
-    className: "footer-logo subscribe-heading",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 253
-    },
-    __self: this
-  }, "Subscribe and stay tuned"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionFormContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 256
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscrptionForm, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 257
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionInput, {
+    className: "footer-logo subscribe-heading"
+  }, "Subscribe and stay tuned"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionFormContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscrptionForm, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionInput, {
     placeholder: "Enter your email address.",
     value: formValue,
-    onChange: changeFormValue,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 258
-    },
-    __self: this
+    onChange: changeFormValue
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionSubmitButton, {
-    ariaRole: "submit",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 263
-    },
-    __self: this
+    ariaRole: "submit"
   })))))));
 };
 
@@ -45644,6 +45513,23 @@ var checkGamePath = function checkGamePath(game, location) {
 
   return false;
 };
+/**
+ * This Function formats the game date by effectively
+ * removing the year part  of the Date
+ *
+ * @param {string} date
+ * @returns {string} formatted date.
+ */
+
+
+var formatGameDate = function formatGameDate(date) {
+  if (date && date.length > 0) {
+    var dateArr = date.split(" ");
+    return "".concat(dateArr[0], " ").concat(dateArr[1]);
+  }
+
+  return "? ? ?";
+};
 
 var GameCard = function GameCard(_ref) {
   var game = _ref.game,
@@ -45670,8 +45556,9 @@ var GameCard = function GameCard(_ref) {
     passHref: true
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamContentWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeContainer, {
     flexDirection: "column",
+    alignItems: "center",
     width: ["auto", "auto", "5.5rem", "5.5rem"]
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeWrapper, null, game.time || "19:45"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameDateWrapper, null, game.date || "26 Aug")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team1 || "Team 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VsTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "vs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team2 || "Team 2"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArrowContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeWrapper, null, game.time || "19:45"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameDateWrapper, null, formatGameDate(game.date) || "26 Aug")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team1 || "Team 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VsTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "vs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team2 || "Team 2"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArrowContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_right_arrow_filled_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "Arrow Icon"
   })))));
@@ -46053,8 +45940,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _resources_icons_menu_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_menu_svg__WEBPACK_IMPORTED_MODULE_5__);
 /* harmony import */ var _resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/resources/icons/top-games.svg */ "./src/resources/icons/top-games.svg");
 /* harmony import */ var _resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6__);
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/navigation/components/fixed-footer-navigation.js";
-
 /* eslint-disable jsx-a11y/anchor-is-valid */
 
 /* eslint-disable no-nested-ternary */
@@ -46096,162 +45981,34 @@ var NavigationTextWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["defa
 });
 
 var FixedFooterNavigation = function FixedFooterNavigation() {
-  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FooterNavigationContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 74
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinksContainer, {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(FooterNavigationContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinksContainer, {
     flexDirection: "row",
-    width: ["0.8"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 75
-    },
-    __self: this
+    width: ["0.8"]
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
-    width: [4 / 12],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 77
-    },
-    __self: this
+    width: [4 / 12]
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
-    passHref: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 78
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 79
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 80
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    passHref: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_menu_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    alt: "menu icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 81
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 83
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 84
-    },
-    __self: this
-  }, "Menu"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
-    width: [4 / 12],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 91
-    },
-    __self: this
+    alt: "menu icon"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Menu"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
+    width: [4 / 12]
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
-    passHref: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 92
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 93
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 94
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    passHref: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_top_games_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    alt: "top games icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 95
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 97
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 98
-    },
-    __self: this
-  }, "Top Games"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
-    width: [4 / 12],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 105
-    },
-    __self: this
+    alt: "top games icon"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Top Games"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkWrapper, {
+    width: [4 / 12]
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
     href: "/",
-    passHref: true,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 106
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 107
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 108
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+    passHref: true
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationLinkIconWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_login_icon_svg__WEBPACK_IMPORTED_MODULE_4___default.a,
-    alt: "login icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 109
-    },
-    __self: this
-  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 111
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 112
-    },
-    __self: this
-  }, "Login")))))));
+    alt: "login icon"
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(NavigationTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "Login")))))));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (FixedFooterNavigation);
@@ -46309,7 +46066,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/navigation/components/index.js";
 
 
 
@@ -46372,235 +46128,55 @@ function (_React$Component) {
     value: function render() {
       var props = this.props;
       return react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavContainer"], {
-        navHeight: props.navHeight,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 132
-        },
-        __self: this
+        navHeight: props.navHeight
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavContainerFlex"], {
         alignItems: "center",
-        flexDirection: "row",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 133
-        },
-        __self: this
+        flexDirection: "row"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["LogoContainerBox"], {
         className: "logo-container",
-        width: ["8rem", "10rem"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 134
-        },
-        __self: this
+        width: ["8rem", "10rem"]
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
-        href: "/",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 137
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 138
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["LogoWrapper"], {
-        className: "logo-wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 139
-        },
-        __self: this
-      }, "Logo")))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinksContentContainerBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 148
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinksContainerFlex"], {
+        href: "/"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledLink"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["LogoWrapper"], {
+        className: "logo-wrapper"
+      }, "Logo")))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinksContentContainerBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinksContainerFlex"], {
         flexDirection: "row",
-        justifyContent: "space-between",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 149
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["ArrowIconWrapper"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 152
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["ArrowIcon"], {
-        src: _resources_icons_right_arrow_svg__WEBPACK_IMPORTED_MODULE_16___default.a,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 153
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 155
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+        justifyContent: "space-between"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["ArrowIconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["ArrowIcon"], {
+        src: _resources_icons_right_arrow_svg__WEBPACK_IMPORTED_MODULE_16___default.a
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
         href: "/",
-        passHref: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 156
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 157
-        },
-        __self: this
-      }, "Home"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 160
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+        passHref: true
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], null, "Home"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
         href: "#",
-        passHref: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 161
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 162
-        },
-        __self: this
-      }, "About Us"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 165
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+        passHref: true
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], null, "About Us"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
         href: "#",
-        passHref: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 166
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 167
-        },
-        __self: this
-      }, "Instance Games"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 170
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+        passHref: true
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], null, "Instance Games"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
         href: "#",
-        passHref: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 171
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 172
-        },
-        __self: this
-      }, "Betting Highlights"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 175
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
+        passHref: true
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], null, "Betting Highlights"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["NavLinkWrapperBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
         href: "#",
-        passHref: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 176
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 177
-        },
-        __self: this
-      }, "Contact Us"))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["RegistrationControlsBox"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 184
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Flex"], {
-        flexDirection: "row",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 185
-        },
-        __self: this
+        passHref: true
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledNavLink"], null, "Contact Us"))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["RegistrationControlsBox"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Flex"], {
+        flexDirection: "row"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Box"], {
         className: "login-control",
-        width: ["10rem"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 186
-        },
-        __self: this
+        width: ["10rem"]
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["LoginBtn"], {
         className: "login-btn",
         to: "#",
         bgcolor: "rgba(0,0,0,0)",
         color: "inherit",
-        width: "80px",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 187
-        },
-        __self: this
+        width: "80px"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["IconWrapper"], {
-        className: "icon-wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 193
-        },
-        __self: this
+        className: "icon-wrapper"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         src: _resources_icons_user_svg__WEBPACK_IMPORTED_MODULE_15___default.a,
-        alt: "user-icon",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 194
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 196
-        },
-        __self: this
-      }, "Login"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Box"], {
-        className: "register-control",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 199
-        },
-        __self: this
+        alt: "user-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, "Login"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Box"], {
+        className: "register-control"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["RegisterBtn"], {
         className: "register-btn",
         to: "#",
@@ -46608,255 +46184,77 @@ function (_React$Component) {
         color: "#FFFFFF",
         width: "10rem",
         margin: "0px 0px 0px 0rem",
-        padding: "1.2rem 1.5rem",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 200
-        },
-        __self: this
+        padding: "1.2rem 1.5rem"
       }, "Register"))))), props.withSubnav ? react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavigation"], {
-        className: "subnav-container",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 219
-        },
-        __self: this
+        className: "subnav-container"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavWrapperFlex"], {
         className: "subnav-wrapper-flex",
         flexDirection: "row",
         justifyContent: "flex-start",
-        alignItems: "center",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 220
-        },
-        __self: this
+        alignItems: "center"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinksContainerBox"], {
         className: "subnav-links-container",
-        ml: ["2rem", "5rem"],
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 225
-        },
-        __self: this
+        ml: ["2rem", "5rem"]
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinksWrapperFlex"], {
-        className: "subnav-links-wrapper-flex",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 228
-        },
-        __self: this
+        className: "subnav-links-wrapper-flex"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinkWrapperBox"], {
-        className: "subnavLinkWrapperBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 229
-        },
-        __self: this
+        className: "subnavLinkWrapperBox"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_14___default.a, {
         href: "/",
-        passHref: true,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 230
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledSubNavLink"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 231
-        },
-        __self: this
-      }, "All Games"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinkWrapperBox"], {
-        className: "subnavLinkWrapperBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 234
-        },
-        __self: this
+        passHref: true
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledSubNavLink"], null, "All Games"))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinkWrapperBox"], {
+        className: "subnavLinkWrapperBox"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledSubNavLink"], {
         activeClassName: "active",
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 235
-        },
-        __self: this
+        href: "#"
       }, "Live Games")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinkWrapperBox"], {
-        className: "subnavLinkWrapperBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 239
-        },
-        __self: this
+        className: "subnavLinkWrapperBox"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledSubNavLink"], {
         activeClassName: "active",
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 240
-        },
-        __self: this
+        href: "#"
       }, "Finished")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinkWrapperBox"], {
-        className: "subnavLinkWrapperBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 244
-        },
-        __self: this
+        className: "subnavLinkWrapperBox"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledSubNavLink"], {
         activeClassName: "active",
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 245
-        },
-        __self: this
+        href: "#"
       }, "Scheduled")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavLinkWrapperBox"], {
-        className: "subnavLinkWrapperBox",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 249
-        },
-        __self: this
+        className: "subnavLinkWrapperBox"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["StyledSubNavLink"], {
         activeClassName: "active",
-        href: "#",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 250
-        },
-        __self: this
+        href: "#"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["MoreIconWrapper"], {
-        className: "more-icon-wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 251
-        },
-        __self: this
+        className: "more-icon-wrapper"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         src: _resources_icons_more_button_svg__WEBPACK_IMPORTED_MODULE_17___default.a,
-        alt: "more-icon",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 252
-        },
-        __self: this
+        alt: "more-icon"
       })))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavControlElementsBox"], {
         className: "subnav-control-elements",
         ml: "auto",
-        mr: "5rem",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 258
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavControlElementsWrapperFlex"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 262
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavControlElementsWrapperBox"], {
-        mr: "1rem",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 263
-        },
-        __self: this
+        mr: "5rem"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavControlElementsWrapperFlex"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SubNavControlElementsWrapperBox"], {
+        mr: "1rem"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["FilterButtonContainer"], {
         bgcolor: "#FFFFFF",
-        color: "#1F1f1f",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 264
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledDropdown, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 265
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_simple_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownTrigger"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 266
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["ControlIconWrapper"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 267
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
+        color: "#1F1f1f"
+      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledDropdown, null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_simple_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownTrigger"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["ControlIconWrapper"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         src: _resources_icons_controls_svg__WEBPACK_IMPORTED_MODULE_18___default.a,
-        alt: "filter-controls-icon",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 268
-        },
-        __self: this
-      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 273
-        },
-        __self: this
-      }, "Filter by Date")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_simple_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownContent"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 275
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledCalendar, {
+        alt: "filter-controls-icon"
+      })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("span", null, "Filter by Date")), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(react_simple_dropdown__WEBPACK_IMPORTED_MODULE_12__["DropdownContent"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(StyledCalendar, {
         onChange: this.handleDateChange,
         value: this.state.startDate,
         prev2Label: null,
-        next2Label: null,
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 276
-        },
-        __self: this
-      }))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Box"], {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 286
-        },
-        __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SearchBoxWrapperBox"], {
-        classNam: "input-field",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 287
-        },
-        __self: this
+        next2Label: null
+      }))))), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(rebass__WEBPACK_IMPORTED_MODULE_8__["Box"], null, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_styled__WEBPACK_IMPORTED_MODULE_21__["SearchBoxWrapperBox"], {
+        classNam: "input-field"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", {
-        className: "search-icon-wrapper",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 288
-        },
-        __self: this
+        className: "search-icon-wrapper"
       }, react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("img", {
         src: _resources_icons_search_svg__WEBPACK_IMPORTED_MODULE_19___default.a,
-        alt: "search-icon",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 289
-        },
-        __self: this
+        alt: "search-icon"
       })), react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("input", {
         className: "search-bar",
         type: "text",
-        placeholder: "Search",
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 291
-        },
-        __self: this
+        placeholder: "Search"
       }))))))) : null);
     }
   }]);

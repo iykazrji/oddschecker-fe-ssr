@@ -166,6 +166,21 @@ const checkGamePath = (game, location) => {
   return false;
 };
 
+/**
+ * This Function formats the game date by effectively
+ * removing the year part  of the Date
+ *
+ * @param {string} date
+ * @returns {string} formatted date.
+ */
+const formatGameDate = date => {
+  if (date && date.length > 0) {
+    const dateArr = date.split(" ");
+    return `${dateArr[0]} ${dateArr[1]}`;
+  }
+  return "? ? ?";
+};
+
 const GameCard = ({ game, isEven, location, league }) => {
   if (!game) {
     return null;
@@ -193,9 +208,12 @@ const GameCard = ({ game, isEven, location, league }) => {
           <TeamContentWrapper>
             <GameTimeContainer
               flexDirection="column"
+              alignItems="center"
               width={["auto", "auto", "5.5rem", "5.5rem"]}>
               <GameTimeWrapper>{game.time || `19:45`}</GameTimeWrapper>
-              <GameDateWrapper>{game.date || `26 Aug`}</GameDateWrapper>
+              <GameDateWrapper>
+                {formatGameDate(game.date) || `26 Aug`}
+              </GameDateWrapper>
             </GameTimeContainer>
             <TeamInfoContainer>
               <TeamNameWrapper>
