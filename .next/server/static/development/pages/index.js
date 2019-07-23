@@ -1962,23 +1962,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! rebass */ "rebass");
 /* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(rebass__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var react_adsense__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! react-adsense */ "react-adsense");
-/* harmony import */ var react_adsense__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(react_adsense__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../routes */ "./routes.js");
-/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../src/components/navigation/components */ "./src/components/navigation/components/index.js");
-/* harmony import */ var _src_components_navigation_components_fixed_footer_navigation__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../src/components/navigation/components/fixed-footer-navigation */ "./src/components/navigation/components/fixed-footer-navigation.js");
-/* harmony import */ var _src_components_adWrapper_components_index__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../src/components/adWrapper/components/index */ "./src/components/adWrapper/components/index.js");
-/* harmony import */ var _src_components_league_container_components_league_container__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../src/components/league-container/components/league-container */ "./src/components/league-container/components/league-container.js");
-/* harmony import */ var _src_components_game_info_components_game_info_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../src/components/game-info/components/game-info-component */ "./src/components/game-info/components/game-info-component.js");
-/* harmony import */ var _src_components_footer_components__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../src/components/footer/components */ "./src/components/footer/components/index.js");
-/* harmony import */ var _resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @/resources/images/ad-banners/ad1.png */ "./src/resources/images/ad-banners/ad1.png");
-/* harmony import */ var _resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_22__);
-/* harmony import */ var _resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @/resources/images/ad-banners/ad2.png */ "./src/resources/images/ad-banners/ad2.png");
-/* harmony import */ var _resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_23__);
-/* harmony import */ var _resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! @/resources/icons/loading.svg */ "./src/resources/icons/loading.svg");
-/* harmony import */ var _resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_24___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_24__);
-/* harmony import */ var _api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../api/website-odds-service */ "./api/website-odds-service.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../routes */ "./routes.js");
+/* harmony import */ var _routes__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_routes__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var _src_components_navigation_components__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../src/components/navigation/components */ "./src/components/navigation/components/index.js");
+/* harmony import */ var _src_components_navigation_components_fixed_footer_navigation__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../src/components/navigation/components/fixed-footer-navigation */ "./src/components/navigation/components/fixed-footer-navigation.js");
+/* harmony import */ var _src_components_adWrapper_components_index__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../src/components/adWrapper/components/index */ "./src/components/adWrapper/components/index.js");
+/* harmony import */ var _src_components_league_container_components_league_container__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../src/components/league-container/components/league-container */ "./src/components/league-container/components/league-container.js");
+/* harmony import */ var _src_components_game_info_components_game_info_component__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../src/components/game-info/components/game-info-component */ "./src/components/game-info/components/game-info-component.js");
+/* harmony import */ var _src_components_footer_components__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../src/components/footer/components */ "./src/components/footer/components/index.js");
+/* harmony import */ var _resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! @/resources/images/ad-banners/ad1.png */ "./src/resources/images/ad-banners/ad1.png");
+/* harmony import */ var _resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_21___default = /*#__PURE__*/__webpack_require__.n(_resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_21__);
+/* harmony import */ var _resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! @/resources/images/ad-banners/ad2.png */ "./src/resources/images/ad-banners/ad2.png");
+/* harmony import */ var _resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_22___default = /*#__PURE__*/__webpack_require__.n(_resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_22__);
+/* harmony import */ var _resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! @/resources/icons/loading.svg */ "./src/resources/icons/loading.svg");
+/* harmony import */ var _resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_23___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_23__);
+/* harmony import */ var _api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../api/website-odds-service */ "./api/website-odds-service.js");
 
 
 
@@ -1993,7 +1991,6 @@ __webpack_require__.r(__webpack_exports__);
 /* eslint-disable react/destructuring-assignment */
 
 /* eslint-disable no-underscore-dangle */
-
 
 
 
@@ -2037,21 +2034,17 @@ var LeagueContentContainer = styled_components__WEBPACK_IMPORTED_MODULE_12___def
   displayName: "pages__LeagueContentContainer",
   componentId: "u8s298-5"
 })(["display:flex;flex-direction:column;padding-top:3rem;"]);
-var AdBannerImg = styled_components__WEBPACK_IMPORTED_MODULE_12___default.a.img.withConfig({
-  displayName: "pages__AdBannerImg",
-  componentId: "u8s298-6"
-})(["height:100%;max-width:100%;display:block;align-self:flex-start;"]);
 var GameInfoComponentContainer = styled_components__WEBPACK_IMPORTED_MODULE_12___default.a.div.withConfig({
   displayName: "pages__GameInfoComponentContainer",
-  componentId: "u8s298-7"
+  componentId: "u8s298-6"
 })(["width:100%;height:100%;position:relative;@media screen and (max-width:738px){position:absolute;z-index:3;width:100%;border-left:none;}"]);
 var GameInfoComponentLoadingContainer = styled_components__WEBPACK_IMPORTED_MODULE_12___default.a.div.withConfig({
   displayName: "pages__GameInfoComponentLoadingContainer",
-  componentId: "u8s298-8"
+  componentId: "u8s298-7"
 })(["width:100%;height:100%;position:absolute;top:0;left:0;background-color:#FFFFFF;border-left:1px solid rgba(10,10,10,0.09);"]);
 var LoadingIconContainer = styled_components__WEBPACK_IMPORTED_MODULE_12___default.a.div.withConfig({
   displayName: "pages__LoadingIconContainer",
-  componentId: "u8s298-9"
+  componentId: "u8s298-8"
 })(["width:7rem;height:7rem;margin:0 auto;margin-top:5rem;display:flex;justify-content:center;> img{max-width:100%;}"]);
 
 var filterForSelectedGame = function filterForSelectedGame(market, id) {
@@ -2068,7 +2061,7 @@ var renderLeagues = function renderLeagues(leagueData) {
   if (leagueData) {
     return leagueData.map(function (_leagueData, index) {
       // eslint-disable-next-line react/no-array-index-key
-      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_league_container_components_league_container__WEBPACK_IMPORTED_MODULE_19__["default"], {
+      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_league_container_components_league_container__WEBPACK_IMPORTED_MODULE_18__["default"], {
         key: index,
         leagueData: _leagueData
       });
@@ -2108,7 +2101,7 @@ function (_React$Component) {
     value: function componentDidMount() {
       var _this2 = this;
 
-      _routes__WEBPACK_IMPORTED_MODULE_15__["Router"].events.on("routeChangeStart", function (url) {
+      _routes__WEBPACK_IMPORTED_MODULE_14__["Router"].events.on("routeChangeStart", function (url) {
         var urlArr = url.split("/");
 
         if (urlArr[1] === "game") {
@@ -2117,7 +2110,7 @@ function (_React$Component) {
           });
         }
       });
-      _routes__WEBPACK_IMPORTED_MODULE_15__["Router"].events.on("routeChangeComplete", function () {
+      _routes__WEBPACK_IMPORTED_MODULE_14__["Router"].events.on("routeChangeComplete", function () {
         _this2.setState({
           gameInfoLoading: false
         });
@@ -2131,6 +2124,7 @@ function (_React$Component) {
           eplGames = _this$props.eplGames,
           europeanGames = _this$props.europeanGames,
           mlsGames = _this$props.mlsGames,
+          laLigaGames = _this$props.laLigaGames,
           bet9jaData = _this$props.bet9jaData,
           merrybetData = _this$props.merrybetData,
           surebetData = _this$props.surebetData,
@@ -2142,20 +2136,21 @@ function (_React$Component) {
       var leagues = [{
         eplGames: eplGames
       }, {
+        laLigaGames: laLigaGames
+      }, {
         mlsGames: mlsGames
       }, {
         europeanGames: europeanGames
       }];
-      console.log("Leagues: ", leagues);
-      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_11___default.a, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", null, "Oddschecker - Home")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__["CachetteNavigation"], {
+      return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(next_head__WEBPACK_IMPORTED_MODULE_11___default.a, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("title", null, "Oddschecker - Home")), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_15__["CachetteNavigation"], {
         className: "cachette-navigation",
-        navComponent: react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_16__["default"], {
+        navComponent: react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components__WEBPACK_IMPORTED_MODULE_15__["default"], {
           navHeight: "8rem",
           withSubnav: true
         }),
         initVisible: true,
         navHeight: "8rem"
-      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components_fixed_footer_navigation__WEBPACK_IMPORTED_MODULE_17__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_navigation_components_fixed_footer_navigation__WEBPACK_IMPORTED_MODULE_16__["default"], {
         className: "fixed-footer-navigation"
       }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(MainContentContainerFlex, {
         className: "main-content-container",
@@ -2166,15 +2161,15 @@ function (_React$Component) {
       }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(MainGamesContentContainerBox, {
         width: [1, 1, 1, 0.75],
         mx: "auto"
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_adWrapper_components_index__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_adWrapper_components_index__WEBPACK_IMPORTED_MODULE_17__["default"], {
         height: ["8rem", "8rem", "8rem", "10rem"],
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("img", {
-            src: _resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_22___default.a,
+            src: _resources_images_ad_banners_ad1_png__WEBPACK_IMPORTED_MODULE_21___default.a,
             alt: "Ad Banner"
           }));
         }
-      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(GamesContentContainer, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(LeagueContentContainer, null, renderLeagues(leagues)), this.state.gameInfoLoading || id ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(GameInfoComponentContainer, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, id ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_game_info_components_game_info_component__WEBPACK_IMPORTED_MODULE_20__["default"], {
+      }), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(GamesContentContainer, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(LeagueContentContainer, null, renderLeagues(leagues)), this.state.gameInfoLoading || id ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(GameInfoComponentContainer, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, id ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_game_info_components_game_info_component__WEBPACK_IMPORTED_MODULE_19__["default"], {
         gameId: id,
         bet9jaData: bet9jaData ? filterForSelectedGame(bet9jaData.market, id) : null,
         merrybetData: merrybetData ? filterForSelectedGame(merrybetData.market, id) : null,
@@ -2185,20 +2180,20 @@ function (_React$Component) {
         _1960betData: _1960betData ? filterForSelectedGame(_1960betData.market, id) : null,
         betkingData: betkingData ? filterForSelectedGame(betkingData.market, id) : null
       }) : null, this.state.gameInfoLoading ? react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(GameInfoComponentLoadingContainer, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(LoadingIconContainer, null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("img", {
-        src: _resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_24___default.a,
+        src: _resources_icons_loading_svg__WEBPACK_IMPORTED_MODULE_23___default.a,
         alt: "loading indicator"
       }))) : null)) : null)), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(MainAdsContentContainerBox, {
         width: [0, 0, 0, 0.2],
         px: ["2rem"]
-      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_adWrapper_components_index__WEBPACK_IMPORTED_MODULE_18__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_adWrapper_components_index__WEBPACK_IMPORTED_MODULE_17__["default"], {
         height: "60rem",
         render: function render() {
           return react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_10__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement("img", {
-            src: _resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_23___default.a,
+            src: _resources_images_ad_banners_ad2_png__WEBPACK_IMPORTED_MODULE_22___default.a,
             alt: "Ad Banner"
           }));
         }
-      }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_footer_components__WEBPACK_IMPORTED_MODULE_21__["default"], null)));
+      }))), react__WEBPACK_IMPORTED_MODULE_10___default.a.createElement(_src_components_footer_components__WEBPACK_IMPORTED_MODULE_20__["default"], null)));
     }
   }], [{
     key: "getInitialProps",
@@ -2206,7 +2201,7 @@ function (_React$Component) {
       var _getInitialProps = Object(_babel_runtime_corejs2_helpers_esm_asyncToGenerator__WEBPACK_IMPORTED_MODULE_2__["default"])(
       /*#__PURE__*/
       _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
-        var query, eplGames, europeanGames, mlsGames, responseObj, bet9jaData, merrybetData, surebetData, betwayData, sportybetData, nairabetData, _1960betData, betkingData;
+        var query, eplGames, europeanGames, mlsGames, laLigaGames, responseObj, bet9jaData, merrybetData, surebetData, betwayData, sportybetData, nairabetData, _1960betData, betkingData;
 
         return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
           while (1) {
@@ -2215,73 +2210,80 @@ function (_React$Component) {
                 query = _ref.query;
                 _context.prev = 1;
                 _context.next = 4;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "pl");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getAllGamesInfo"])("surebet", "pl");
 
               case 4:
                 eplGames = _context.sent;
                 _context.next = 7;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "eu");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getAllGamesInfo"])("surebet", "eu");
 
               case 7:
                 europeanGames = _context.sent;
                 _context.next = 10;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getAllGamesInfo"])("merrybet", "mls");
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getAllGamesInfo"])("surebet", "mls");
 
               case 10:
                 mlsGames = _context.sent;
+                _context.next = 13;
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getAllGamesInfo"])("surebet", "ll");
+
+              case 13:
+                laLigaGames = _context.sent;
                 // The response object contains data that would be returned
                 // From our GetInitialProps method...
                 responseObj = {
                   europeanGames: europeanGames.data || null,
                   mlsGames: mlsGames.data || null,
-                  eplGames: eplGames.data || null
+                  eplGames: eplGames.data || null,
+                  laLigaGames: laLigaGames.data || null
                 };
 
                 if (!query) {
-                  _context.next = 38;
+                  _context.next = 41;
                   break;
                 }
 
-                _context.next = 15;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBet9jaGamesInfo"])("bet9ja", query.league);
-
-              case 15:
-                bet9jaData = _context.sent;
                 _context.next = 18;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getMerryBetGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getBet9jaGamesInfo"])(query.league);
 
               case 18:
-                merrybetData = _context.sent;
+                bet9jaData = _context.sent;
                 _context.next = 21;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSureBetGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getMerryBetGamesInfo"])(query.league);
 
               case 21:
-                surebetData = _context.sent;
+                merrybetData = _context.sent;
                 _context.next = 24;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetWayGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getSureBetGamesInfo"])(query.league);
 
               case 24:
-                betwayData = _context.sent;
+                surebetData = _context.sent;
                 _context.next = 27;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getSportyBetGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getBetWayGamesInfo"])(query.league);
 
               case 27:
-                sportybetData = _context.sent;
+                betwayData = _context.sent;
                 _context.next = 30;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getNairaBetGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getSportyBetGamesInfo"])(query.league);
 
               case 30:
-                nairabetData = _context.sent;
+                sportybetData = _context.sent;
                 _context.next = 33;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["get1960BetGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getNairaBetGamesInfo"])(query.league);
 
               case 33:
-                _1960betData = _context.sent;
+                nairabetData = _context.sent;
                 _context.next = 36;
-                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_25__["getBetKingGamesInfo"])(query.league);
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["get1960BetGamesInfo"])(query.league);
 
               case 36:
+                _1960betData = _context.sent;
+                _context.next = 39;
+                return Object(_api_website_odds_service__WEBPACK_IMPORTED_MODULE_24__["getBetKingGamesInfo"])(query.league);
+
+              case 39:
                 betkingData = _context.sent;
+                // Setup the Response object.
                 responseObj = Object(_babel_runtime_corejs2_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_1__["default"])({}, responseObj, {
                   query: query,
                   id: query.id,
@@ -2295,21 +2297,21 @@ function (_React$Component) {
                   betkingData: betkingData.data
                 });
 
-              case 38:
+              case 41:
                 return _context.abrupt("return", responseObj);
 
-              case 41:
-                _context.prev = 41;
+              case 44:
+                _context.prev = 44;
                 _context.t0 = _context["catch"](1);
                 console.log(_context.t0);
                 return _context.abrupt("return", _context.t0);
 
-              case 45:
+              case 48:
               case "end":
                 return _context.stop();
             }
           }
-        }, _callee, null, [[1, 41]]);
+        }, _callee, null, [[1, 44]]);
       }));
 
       function getInitialProps(_x) {
@@ -2360,7 +2362,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rebass */ "rebass");
 /* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(rebass__WEBPACK_IMPORTED_MODULE_3__);
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/adWrapper/components/index.js";
 // This is the Main Ad Wrapper component.
 // If uses the Render Props pattern to take in and render an Ad
 // The Component Assumes the Ads are all in the Horizontal Mode
@@ -2380,7 +2381,7 @@ var AdWrapperFlex = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(reb
 var AdWrapperContainer = styled_components__WEBPACK_IMPORTED_MODULE_1___default()(rebass__WEBPACK_IMPORTED_MODULE_3__["Box"]).withConfig({
   displayName: "components__AdWrapperContainer",
   componentId: "icjmqx-1"
-})(["height:100%;background-color:", ";width:100%;display:flex;justify-content:center;align-items:center;"], function (props) {
+})(["height:100%;background-color:", ";max-width:100%;display:flex;justify-content:center;align-items:center;img{max-width:100%;height:100%;}"], function (props) {
   return props.hasRender ? null : "rgba(200, 200, 200, 0.7)";
 });
 
@@ -2397,26 +2398,14 @@ var AdWrapper = function AdWrapper(_ref) {
     mt: mt,
     my: my,
     mx: mx,
-    mb: mb,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
+    mb: mb
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(AdWrapperContainer, {
-    hasRender: !!render,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
+    hasRender: !!render
   }, render ? render() : null));
 };
 
 AdWrapper.propTypes = {
-  render: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func,
-  isHorizontal: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.bool,
-  dimensions: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.array
+  render: prop_types__WEBPACK_IMPORTED_MODULE_2___default.a.func.isRequired
 };
 /* harmony default export */ __webpack_exports__["default"] = (AdWrapper);
 
@@ -2844,26 +2833,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "lodash");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rebass */ "rebass");
-/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(rebass__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var react_dropdown__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dropdown */ "react-dropdown");
-/* harmony import */ var react_dropdown__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dropdown__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-dropdown/style.css */ "./node_modules/react-dropdown/style.css");
-/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-table */ "react-table");
-/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_table__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-table/react-table.css */ "./node_modules/react-table/react-table.css");
-/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_table_react_table_css__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/data/1x2-odds-data */ "./src/data/1x2-odds-data.js");
-/* harmony import */ var _data_1st_half_result_odds_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/data/1st-half-result-odds-data */ "./src/data/1st-half-result-odds-data.js");
-/* harmony import */ var _data_both_teams_to_score_odds_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/data/both-teams-to-score-odds-data */ "./src/data/both-teams-to-score-odds-data.js");
-/* harmony import */ var _data_double_chance_odds_data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/data/double-chance-odds-data */ "./src/data/double-chance-odds-data.js");
-/* harmony import */ var _data_mock_league__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/data/mock-league */ "./src/data/mock-league.js");
-/* harmony import */ var _data_total_goals_odds_data__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @/data/total-goals-odds-data */ "./src/data/total-goals-odds-data.js");
-/* harmony import */ var _resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @/resources/icons/close.svg */ "./src/resources/icons/close.svg");
-/* harmony import */ var _resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_16__);
+/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rebass */ "rebass");
+/* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(rebass__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var react_dropdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-dropdown */ "react-dropdown");
+/* harmony import */ var react_dropdown__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_dropdown__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-dropdown/style.css */ "./node_modules/react-dropdown/style.css");
+/* harmony import */ var react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_dropdown_style_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-table */ "react-table");
+/* harmony import */ var react_table__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_table__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-table/react-table.css */ "./node_modules/react-table/react-table.css");
+/* harmony import */ var react_table_react_table_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react_table_react_table_css__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/data/1x2-odds-data */ "./src/data/1x2-odds-data.js");
+/* harmony import */ var _data_1st_half_result_odds_data__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/data/1st-half-result-odds-data */ "./src/data/1st-half-result-odds-data.js");
+/* harmony import */ var _data_both_teams_to_score_odds_data__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/data/both-teams-to-score-odds-data */ "./src/data/both-teams-to-score-odds-data.js");
+/* harmony import */ var _data_double_chance_odds_data__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/data/double-chance-odds-data */ "./src/data/double-chance-odds-data.js");
+/* harmony import */ var _data_total_goals_odds_data__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/data/total-goals-odds-data */ "./src/data/total-goals-odds-data.js");
+/* harmony import */ var _resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/resources/icons/close.svg */ "./src/resources/icons/close.svg");
+/* harmony import */ var _resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_14__);
 
 
 /* eslint-disable no-nested-ternary */
@@ -2882,25 +2868,23 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
  // Declare styled components...
 
 var GameComponentWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "game-info-component__GameComponentWrapper",
   componentId: "wqowvf-0"
-})(["width:100%;display:flex;height:100%;"]);
+})(["width:100%;display:flex;height:100%;position:relative;padding-bottom:5rem;@media screen and (max-width:738px){background-color:#FFFFFF;}"]);
 var GameInfoContentContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.div.withConfig({
   displayName: "game-info-component__GameInfoContentContainer",
   componentId: "wqowvf-1"
-})(["width:100%;position:relative;background-color:#FFFFFF;padding:4rem 1.5rem;@media screen and (max-width:738px){padding:2rem 0rem;}"]);
-var GameInfoContentHeadingWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Flex"]).withConfig({
+})(["width:100%;height:60vh;position:sticky;top:100px;background-color:#FFFFFF;padding:4rem 1.5rem;overflow:visible;@media screen and (max-width:738px){padding:2rem 0rem;}"]);
+var GameInfoContentHeadingWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Flex"]).withConfig({
   displayName: "game-info-component__GameInfoContentHeadingWrapper",
   componentId: "wqowvf-2"
 })(["height:auto;@media screen and (max-width:738px){background-color:", ";padding:1rem 1.5rem;}"], function (props) {
   return props.theme ? props.theme.colorTheme.grey : "inherit";
 });
-var GameInfoHeadingContent = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Flex"]).withConfig({
+var GameInfoHeadingContent = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Flex"]).withConfig({
   displayName: "game-info-component__GameInfoHeadingContent",
   componentId: "wqowvf-3"
 })(["display:flex;flex-direction:row;"]);
@@ -2908,11 +2892,11 @@ var GameDateContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a
   displayName: "game-info-component__GameDateContainer",
   componentId: "wqowvf-4"
 })(["display:block;width:100%;opacity:.7;font-size:1.4rem;margin-top:1rem;text-align:left;"]);
-var TeamInfoContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Box"]).withConfig({
+var TeamInfoContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Box"]).withConfig({
   displayName: "game-info-component__TeamInfoContainer",
   componentId: "wqowvf-5"
 })(["font-size:1.6rem;"]);
-var GameInfoContentHeadingContent = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Box"]).withConfig({
+var GameInfoContentHeadingContent = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Box"]).withConfig({
   displayName: "game-info-component__GameInfoContentHeadingContent",
   componentId: "wqowvf-6"
 })(["display:flex;flex-direction:column;"]);
@@ -2927,12 +2911,12 @@ var CloseButtonWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default.
 var CloseButton = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.button.withConfig({
   displayName: "game-info-component__CloseButton",
   componentId: "wqowvf-9"
-})(["background-image:url(", ");background-repeat:no-repeat;background-position:center;background-color:transparent;width:100%;height:100%;border:none;opacity:0.5;cursor:pointer;transition:transform 0.4s ease-out;&:hover{transform:scale(.85) rotate(90deg);}"], _resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_16___default.a);
-var MarketControlsContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Flex"]).withConfig({
+})(["background-image:url(", ");background-repeat:no-repeat;background-position:center;background-color:transparent;width:100%;height:100%;border:none;opacity:0.5;cursor:pointer;transition:transform 0.4s ease-out;&:hover{transform:scale(.85) rotate(90deg);}"], _resources_icons_close_svg__WEBPACK_IMPORTED_MODULE_14___default.a);
+var MarketControlsContainer = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Flex"]).withConfig({
   displayName: "game-info-component__MarketControlsContainer",
   componentId: "wqowvf-10"
 })(["height:auto;@media screen and (max-width:738px){padding:0px;}"]);
-var MarketIndicatorWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Box"]).withConfig({
+var MarketIndicatorWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Box"]).withConfig({
   displayName: "game-info-component__MarketIndicatorWrapper",
   componentId: "wqowvf-11"
 })([""]);
@@ -2940,11 +2924,11 @@ var MarketIndicator = styled_components__WEBPACK_IMPORTED_MODULE_3___default.a.s
   displayName: "game-info-component__MarketIndicator",
   componentId: "wqowvf-12"
 })(["background-color:rgba(240,240,240,0.6);color:#DB4437;width:100%;border-radius:5px;height:100%;display:block;text-align:center;font-size:1.4rem;font-weight:700;padding:.75rem 1rem;"]);
-var MarketDropdownWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_5__["Box"]).withConfig({
+var MarketDropdownWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(rebass__WEBPACK_IMPORTED_MODULE_4__["Box"]).withConfig({
   displayName: "game-info-component__MarketDropdownWrapper",
   componentId: "wqowvf-13"
 })(["display:flex;justify-content:center;align-items:center;"]);
-var StyledDropdown = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(react_dropdown__WEBPACK_IMPORTED_MODULE_6___default.a).withConfig({
+var StyledDropdown = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(react_dropdown__WEBPACK_IMPORTED_MODULE_5___default.a).withConfig({
   displayName: "game-info-component__StyledDropdown",
   componentId: "wqowvf-14"
 })(["width:100%;.Dropdown-control{background-color:rgba(230,230,230,0.7);font-size:1.3rem;}.Dropdown-menu{font-size:1.2rem;border-radius:7px;max-height:auto !important;@media screen and (max-width:738px){width:200%;left:-100%;margin-top:10px;}.Dropdown-option{padding:12px 10px;}}"]);
@@ -2953,7 +2937,7 @@ var BookiesTableWrapper = styled_components__WEBPACK_IMPORTED_MODULE_3___default
   componentId: "wqowvf-15"
 })(["width:100%;min-height:4rem;margin-top:2.5rem;padding:.5rem 1.5rem;@media screen and (max-width:738px){padding:0px;}"]); // Table Styles
 
-var StyledTable = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(react_table__WEBPACK_IMPORTED_MODULE_8___default.a).withConfig({
+var StyledTable = styled_components__WEBPACK_IMPORTED_MODULE_3___default()(react_table__WEBPACK_IMPORTED_MODULE_7___default.a).withConfig({
   displayName: "game-info-component__StyledTable",
   componentId: "wqowvf-16"
 })(["width:auto;font-size:1.4rem;text-align:left;background-color:rgba(240,240,240,0.6);border:none !important;border-radius:4px 4px 0px 0px;.rt-thead{box-shadow:none !important;height:4.5rem;justify-content:center;border-bottom:1px solid rgba(0,0,0,0.1);min-width:100% !important;width:100% !important;.rt-th{display:flex;align-items:center;padding:1rem 1.5rem !important;@media screen and (max-width:738px){padding:.5rem 1rem !important;}}}.rt-tbody{.rt-td{display:flex;align-items:center;padding:1rem 1.5rem !important;@media screen and (max-width:738px){padding:1rem 1rem !important;}}}"]);
@@ -3130,7 +3114,7 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
       selectedMarket = _useState2[0],
       setSelectedMarket = _useState2[1];
 
-  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(Object(_data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_10__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null)),
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(Object(_data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_9__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null)),
       _useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState3, 2),
       selectedOddsData = _useState4[0],
       setSelectedOddsData = _useState4[1];
@@ -3158,27 +3142,27 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
   var buildOddsDataTable = function buildOddsDataTable(market) {
     switch (market.value) {
       case "1X2":
-        setSelectedOddsData(Object(_data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_10__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
+        setSelectedOddsData(Object(_data_1x2_odds_data__WEBPACK_IMPORTED_MODULE_9__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
         setSelectedOddsTableColumns(_x12tableColumns);
         break;
 
       case "Both Teams to Score":
-        setSelectedOddsData(Object(_data_both_teams_to_score_odds_data__WEBPACK_IMPORTED_MODULE_12__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
+        setSelectedOddsData(Object(_data_both_teams_to_score_odds_data__WEBPACK_IMPORTED_MODULE_11__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
         setSelectedOddsTableColumns(_bothTeamScoreTableColumns);
         break;
 
       case "Double Chance":
-        setSelectedOddsData(Object(_data_double_chance_odds_data__WEBPACK_IMPORTED_MODULE_13__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
+        setSelectedOddsData(Object(_data_double_chance_odds_data__WEBPACK_IMPORTED_MODULE_12__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
         setSelectedOddsTableColumns(_doubleChanceTableColumns);
         break;
 
       case "Total Goals: Under / Over":
-        setSelectedOddsData(Object(_data_total_goals_odds_data__WEBPACK_IMPORTED_MODULE_15__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
+        setSelectedOddsData(Object(_data_total_goals_odds_data__WEBPACK_IMPORTED_MODULE_13__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
         setSelectedOddsTableColumns(_totalGoalsTableColumns);
         break;
 
       case "1st Half Result":
-        setSelectedOddsData(Object(_data_1st_half_result_odds_data__WEBPACK_IMPORTED_MODULE_11__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
+        setSelectedOddsData(Object(_data_1st_half_result_odds_data__WEBPACK_IMPORTED_MODULE_10__["default"])(bet9jaData ? bet9jaData[0] ? bet9jaData[0].odds : null : null, merrybetData ? merrybetData[0] ? merrybetData[0].odds : null : null, surebetData ? surebetData[0] ? surebetData[0].odds : null : null, betwayData ? betwayData[0] ? betwayData[0].odds : null : null, sportybetData ? sportybetData[0] ? sportybetData[0].odds : null : null, nairabetData ? nairabetData[0] ? nairabetData[0].odds : null : null, _1960betData ? _1960betData[0] ? _1960betData[0].odds : null : null, betkingData ? betkingData[0] ? betkingData[0].odds : null : null));
         setSelectedOddsTableColumns(_1stHalfResultTableColumns);
         break;
 
@@ -3235,7 +3219,9 @@ var GameInfoComponent = function GameInfoComponent(_ref6) {
     minRows: selectedOddsData.length
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(TableSubtextWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("p", null, "Odds shown here come direct from online bookmakers. Please check all aspects of your bets before making a placement.", " ", react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("a", {
     href: "/"
-  }, "More Info"))))));
+  }, "More Info"))))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    className: "clear"
+  }));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (GameInfoComponent);
@@ -3415,7 +3401,7 @@ var GameCard = function GameCard(_ref) {
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(StyledLink, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamContentWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeContainer, {
     flexDirection: "column",
     alignItems: "center",
-    width: ["auto", "auto", "5.5rem", "5.5rem"]
+    width: ["auto", "auto", "7.5rem", "7.5rem"]
   }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameTimeWrapper, null, game.time || "19:45"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(GameDateWrapper, null, formatGameDate(game.date) || "26 Aug")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team1 || "Team 1")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(VsTextWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", null, "vs")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamInfoContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameWrapper, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(TeamNameText, null, team2 || "Team 2"))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(ArrowContainer, null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
     src: _resources_icons_right_arrow_filled_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
     alt: "Arrow Icon"
@@ -3426,9 +3412,6 @@ GameCard.propTypes = {
   /** Check if game card is even */
   isEven: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.bool,
 
-  /** Contains the Match object */
-  match: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
-
   /** Contains the Game object */
   game: prop_types__WEBPACK_IMPORTED_MODULE_1___default.a.object,
 
@@ -3438,8 +3421,7 @@ GameCard.propTypes = {
 GameCard.defaultProps = {
   isEven: false,
   game: {},
-  location: {},
-  match: {}
+  location: {}
 };
 /* harmony default export */ __webpack_exports__["default"] = (GameCard);
 
@@ -3498,7 +3480,7 @@ var GamesUnavailableMessageContainer = styled_components__WEBPACK_IMPORTED_MODUL
 var RenderGameCards = function RenderGameCards(gamesArr, league) {
   return gamesArr.map(function (game, index) {
     return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_games_card_components_game_card__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      key: index,
+      key: game.eventID,
       game: game,
       league: league,
       isEven: index % 2 === 0
@@ -3529,12 +3511,15 @@ var LeagueContainer = function LeagueContainer(_ref) {
         league = "pl";
         break;
 
+      case "La Liga":
+        league = "ll";
+        break;
+
       default:
         league = "pl";
     }
   }
 
-  console.log(res);
   return res[0] ? react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueContainerWrapper, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueNameTitleContainer, {
     flexDirection: "row"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(LeagueTitle, {
@@ -5274,179 +5259,6 @@ var buildDataTable = function buildDataTable(bet9jaOdds, merryBetOdds, surebetOd
 
 /***/ }),
 
-/***/ "./src/data/mock-league.js":
-/*!*********************************!*\
-  !*** ./src/data/mock-league.js ***!
-  \*********************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ([{
-  id: "1",
-  title: "English Premier League",
-  games: {
-    "0": {
-      id: "00001",
-      team1: {
-        name: "Arsenal",
-        badge: ""
-      },
-      team2: {
-        name: "Brentford",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "18:00"
-      }
-    },
-    "1": {
-      id: "00002",
-      team1: {
-        name: "Arsenal",
-        badge: ""
-      },
-      team2: {
-        name: "Brentford",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "18:00"
-      }
-    },
-    "2": {
-      id: "00003",
-      team1: {
-        name: "Nottingham Forest",
-        badge: ""
-      },
-      team2: {
-        name: "Fleetwood Town",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "13:00"
-      }
-    },
-    "3": {
-      id: "00004",
-      team1: {
-        name: "West Ham",
-        badge: ""
-      },
-      team2: {
-        name: "Macclesfield",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "13:00"
-      }
-    },
-    "4": {
-      id: "00005",
-      team1: {
-        name: "Tottenham",
-        badge: ""
-      },
-      team2: {
-        name: "Watford",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "13:00"
-      }
-    }
-  }
-}, {
-  id: "2",
-  title: "English Championship",
-  games: {
-    "0": {
-      id: "00006",
-      team1: {
-        name: "Arsenal",
-        badge: ""
-      },
-      team2: {
-        name: "Brentford",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "18:00"
-      }
-    },
-    "1": {
-      id: "00007",
-      team1: {
-        name: "Arsenal",
-        badge: ""
-      },
-      team2: {
-        name: "Brentford",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "18:00"
-      }
-    },
-    "2": {
-      id: "00009",
-      team1: {
-        name: "Nottingham Forest",
-        badge: ""
-      },
-      team2: {
-        name: "Fleetwood Town",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "13:00"
-      }
-    },
-    "3": {
-      id: "000010",
-      team1: {
-        name: "West Ham",
-        badge: ""
-      },
-      team2: {
-        name: "Macclesfield",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "13:00"
-      }
-    },
-    "4": {
-      id: "000011",
-      team1: {
-        name: "Tottenham",
-        badge: ""
-      },
-      team2: {
-        name: "Watford",
-        badge: ""
-      },
-      time: {
-        date: "26 Aug",
-        time: "13:00"
-      }
-    }
-  }
-}]);
-
-/***/ }),
-
 /***/ "./src/data/total-goals-odds-data.js":
 /*!*******************************************!*\
   !*** ./src/data/total-goals-odds-data.js ***!
@@ -6088,17 +5900,6 @@ module.exports = require("prop-types-exact");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
-
-/***/ }),
-
-/***/ "react-adsense":
-/*!********************************!*\
-  !*** external "react-adsense" ***!
-  \********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = require("react-adsense");
 
 /***/ }),
 

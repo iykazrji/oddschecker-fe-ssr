@@ -62,7 +62,7 @@ const RenderGameCards = (gamesArr, league) => {
   return gamesArr.map((game, index) => {
     return (
       <GameCard
-        key={index}
+        key={game.eventID}
         game={game}
         league={league}
         isEven={index % 2 === 0}
@@ -89,12 +89,14 @@ const LeagueContainer = ({ leagueData }) => {
       case "Premier League":
         league = "pl";
         break;
+      case "La Liga":
+        league = "ll";
+        break;
       default:
         league = "pl";
     }
   }
 
-  console.log(res);
   return res[0] ? (
     <LeagueContainerWrapper>
       <LeagueNameTitleContainer flexDirection="row">

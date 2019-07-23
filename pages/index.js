@@ -4,7 +4,6 @@ import React, { Fragment } from "react";
 import Head from "next/head";
 import Styled from "styled-components";
 import { Flex, Box } from "rebass";
-import AdSense from "react-adsense";
 import { Router } from "../routes";
 
 // Get components
@@ -77,13 +76,6 @@ const LeagueContentContainer = Styled(Box)`
   padding-top: 3rem;
 `;
 
-const AdBannerImg = Styled.img`
-  height: 100%;
-  max-width: 100%;
-  display: block;
-  align-self: flex-start;
-`;
-
 const GameInfoComponentContainer = Styled.div`
   width: 100%;
   height: 100%;
@@ -146,21 +138,23 @@ class Home extends React.Component {
   static async getInitialProps({ query }) {
     try {
       // Get all European Games
-      const eplGames = await getAllGamesInfo("merrybet", "pl");
-      const europeanGames = await getAllGamesInfo("merrybet", "eu");
-      const mlsGames = await getAllGamesInfo("merrybet", "mls");
+      const eplGames = await getAllGamesInfo("surebet", "pl");
+      const europeanGames = await getAllGamesInfo("surebet", "eu");
+      const mlsGames = await getAllGamesInfo("surebet", "mls");
+      const laLigaGames = await getAllGamesInfo("surebet", "ll");
 
       // The response object contains data that would be returned
       // From our GetInitialProps method...
       let responseObj = {
         europeanGames: europeanGames.data || null,
         mlsGames: mlsGames.data || null,
-        eplGames: eplGames.data || null
+        eplGames: eplGames.data || null,
+        laLigaGames: laLigaGames.data || null
       };
 
       if (query) {
         // Get Markets data for odds...
-        const bet9jaData = await getBet9jaGamesInfo("bet9ja", query.league);
+        const bet9jaData = await getBet9jaGamesInfo(query.league);
         const merrybetData = await getMerryBetGamesInfo(query.league);
         const surebetData = await getSureBetGamesInfo(query.league);
         const betwayData = await getBetWayGamesInfo(query.league);
@@ -168,6 +162,8 @@ class Home extends React.Component {
         const nairabetData = await getNairaBetGamesInfo(query.league);
         const _1960betData = await get1960BetGamesInfo(query.league);
         const betkingData = await getBetKingGamesInfo(query.league);
+
+        // Setup the Response object.
         responseObj = {
           ...responseObj,
           query,
@@ -212,6 +208,7 @@ class Home extends React.Component {
       eplGames,
       europeanGames,
       mlsGames,
+      laLigaGames,
       bet9jaData,
       merrybetData,
       surebetData,
@@ -222,8 +219,12 @@ class Home extends React.Component {
       betkingData
     } = this.props;
 
-    const leagues = [{ eplGames }, { mlsGames }, { europeanGames }];
-    console.log("Leagues: ", leagues);
+    const leagues = [
+      { eplGames },
+      { laLigaGames },
+      { mlsGames },
+      { europeanGames }
+    ];
 
     return (
       <Fragment>

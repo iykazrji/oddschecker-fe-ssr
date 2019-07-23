@@ -18,6 +18,10 @@ module.exports = {
     "import/resolver": {
       node: {
         paths: ["src"]
+      },
+      alias: {
+        map: [["@", "./src"]],
+        extensions: [".js", ".jsx", ".json"]
       }
     }
   }

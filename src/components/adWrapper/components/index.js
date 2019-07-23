@@ -18,10 +18,15 @@ const AdWrapperContainer = Styled(Box)`
   height: 100%;
   background-color: ${props =>
     props.hasRender ? null : "rgba(200, 200, 200, 0.7)"};
-  width: 100%;
+  max-width: 100%;
+  
   display: flex;
   justify-content: center;
   align-items: center;
+  img {
+    max-width: 100%;
+    height: 100%;
+  }
 `;
 
 const AdWrapper = ({ height, mt, my, mx, mb, render }) => {
@@ -32,8 +37,7 @@ const AdWrapper = ({ height, mt, my, mx, mb, render }) => {
       mt={mt}
       my={my}
       mx={mx}
-      mb={mb}
-    >
+      mb={mb}>
       <AdWrapperContainer hasRender={!!render}>
         {render ? render() : null}
       </AdWrapperContainer>
@@ -42,9 +46,7 @@ const AdWrapper = ({ height, mt, my, mx, mb, render }) => {
 };
 
 AdWrapper.propTypes = {
-  render: PropTypes.func,
-  isHorizontal: PropTypes.bool,
-  dimensions: PropTypes.array,
+  render: PropTypes.func.isRequired
 };
 
 export default AdWrapper;

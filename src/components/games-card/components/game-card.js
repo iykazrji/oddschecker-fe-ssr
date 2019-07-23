@@ -209,7 +209,7 @@ const GameCard = ({ game, isEven, location, league }) => {
             <GameTimeContainer
               flexDirection="column"
               alignItems="center"
-              width={["auto", "auto", "5.5rem", "5.5rem"]}>
+              width={["auto", "auto", "7.5rem", "7.5rem"]}>
               <GameTimeWrapper>{game.time || `19:45`}</GameTimeWrapper>
               <GameDateWrapper>
                 {formatGameDate(game.date) || `26 Aug`}
@@ -240,8 +240,6 @@ const GameCard = ({ game, isEven, location, league }) => {
 GameCard.propTypes = {
   /** Check if game card is even */
   isEven: PropTypes.bool,
-  /** Contains the Match object */
-  match: PropTypes.object,
   /** Contains the Game object */
   game: PropTypes.object,
 
@@ -252,8 +250,7 @@ GameCard.propTypes = {
 GameCard.defaultProps = {
   isEven: false,
   game: {},
-  location: {},
-  match: {}
+  location: {}
 };
 
 export default GameCard;

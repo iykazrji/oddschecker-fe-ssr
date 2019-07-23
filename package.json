@@ -34,10 +34,11 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "babel-plugin-styled-components": "^1.10.0",
     "eslint-config-prettier": "^4.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
     "nodemon": "^1.19.0"
   },
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon -w server.js -w src server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "heroku-postbuild": "npm run build",

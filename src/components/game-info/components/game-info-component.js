@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import Router from "next/router";
 import Styled from "styled-components";
-import _ from "lodash";
 import { Flex, Box } from "rebass";
 import Dropdown from "react-dropdown";
 import "react-dropdown/style.css";
@@ -14,7 +13,6 @@ import _x12OddsData from "@/data/1x2-odds-data";
 import _1stHalfResultOddsData from "@/data/1st-half-result-odds-data";
 import _bothTeamsToScoreOddsData from "@/data/both-teams-to-score-odds-data";
 import _doubleChanceOddsData from "@/data/double-chance-odds-data";
-import _mockLeagueOddsData from "@/data/mock-league";
 import _totalGoalsOddsData from "@/data/total-goals-odds-data";
 
 import closeIcon from "@/resources/icons/close.svg";
@@ -24,16 +22,24 @@ const GameComponentWrapper = Styled.div`
     width: 100%;
     display: flex;
     height: 100%;
-`;
+    position: relative;
+    padding-bottom: 5rem;
+    @media screen and (max-width: 738px){
+      background-color: #FFFFFF;
+    }
+  `;
 
 const GameInfoContentContainer = Styled.div`
   width: 100%;
-  position: relative;
+  height: 60vh;
+  position: sticky;
+  top: 100px;
   background-color: #FFFFFF;
   padding: 4rem 1.5rem;
+  overflow: visible;
   @media screen and (max-width: 738px){
     padding: 2rem 0rem;
-  }
+    }
 `;
 
 const GameInfoContentHeadingWrapper = Styled(Flex)`
@@ -695,6 +701,7 @@ const GameInfoComponent = ({
           </BookiesTableWrapper>
         }
       </GameInfoContentContainer>
+      <div className="clear" />
     </GameComponentWrapper>
   );
 };
