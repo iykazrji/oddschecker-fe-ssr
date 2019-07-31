@@ -1,8 +1,14 @@
+/* eslint-disable no-undef */
+/* eslint-disable camelcase */
 /* eslint-disable no-nested-ternary */
 import React, { Fragment, useState } from "react";
 import Styled from "styled-components";
 import PropTypes from "prop-types";
 import { Flex, Box } from "rebass";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import axios from "axios";
+import { mailchimp_url } from "../../../../config/url";
 
 // Social Media Icons
 import GooglePlusIcon from "@/resources/icons/google-plus-logo.svg";
@@ -10,7 +16,7 @@ import FacebookIcon from "@/resources/icons/facebook-logo.svg";
 import TwitterIcon from "@/resources/icons/twitter-logo.svg";
 import InstagramIcon from "@/resources/icons/instagram-logo.svg";
 import SendIcon from "@/resources/icons/send-button.svg";
-
+import SendIconDisabled from "@/resources/icons/send-button-disabled.svg";
 /** Main background component for the site's Footer
  *  @component
  */
@@ -118,6 +124,7 @@ const SubscrptionForm = Styled.form`
   justify-content: center;
   align-items: center;
   border-bottom: 1px solid rgba(10, 10, 10, 0.35);
+  opacity: ${props => (props.disabled ? `0.6` : `1`)};
 `;
 
 /**
@@ -146,7 +153,8 @@ const SubscriptionSubmitButton = Styled.button`
   border: none;
   width: 30px;
   height: 15px;
-  background-image: url(${SendIcon});
+  background-image: ${props =>
+    props.disabled ? `url(${SendIconDisabled})` : `url(${SendIcon})`};
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -174,14 +182,84 @@ RenderSocialMediaIcon.propTypes = {
   altText: PropTypes.string.isRequired
 };
 
+// Configure out Toast
+toast.configure();
 /**
  * Site's footer component.
  */
 const Footer = () => {
   const [formValue, setformValue] = useState("");
+  const [formDisabled, setFormDisabled] = useState(false);
 
   const changeFormValue = e => {
+    e.preventDefault();
     setformValue(e.target.value);
+  };
+
+  /**
+   * Submit Email Action
+   * @param email
+   *
+   */
+  const SubmitEmail = email => {
+    setFormDisabled(true);
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    const isEmailValid = re.test(String(email).toLowerCase());
+    if (!isEmailValid) {
+      toast.error(`Please Provide a Proper Email Address.`, {
+        position: toast.POSITION.BOTTOM_LEFT,
+        toastId: "xx-yy"
+      });
+      console.error("An Invalid email was passed");
+      setFormDisabled(false);
+      return null;
+    }
+
+    return MailChimpSubscribe({
+      email,
+      mailchimp_url
+    });
+  };
+
+  /**
+   * Subscribe to Mailchimp API
+   * @param email
+   */
+  const MailChimpSubscribe = obj => {
+    const url = process.env.production
+      ? mailchimp_url || obj.url
+      : `https://cors-anywhere.herokuapp.com/${mailchimp_url}` || obj.url;
+    axios
+      .post(
+        url,
+        { EMAIL: obj.email },
+        {
+          params: {
+            u: process.env.MAILCHIMP_U,
+            id: process.env.MAILCHIMP_ID
+          },
+          dataType: "json",
+          contentType: "application/json; charset=utf-8"
+        }
+      )
+      .then(result => {
+        setFormDisabled(false);
+
+        toast.success(`Thanks for Subscribing!`, {
+          position: toast.POSITION.BOTTOM_LEFT,
+          toastId: "xx-yy"
+        });
+        return result;
+      })
+      .catch(err => {
+        setFormDisabled(false);
+        toast.error(`An Error occured while subscribing. Please try again`, {
+          position: toast.POSITION.BOTTOM_LEFT,
+          toastId: "xx-yy"
+        });
+        console.log(err);
+        return false;
+      });
   };
   return (
     <Fragment>
@@ -254,13 +332,22 @@ const Footer = () => {
               Subscribe and stay tuned
             </FooterLogoH2>
             <SubscriptionFormContainer>
-              <SubscrptionForm>
+              <SubscrptionForm disabled={formDisabled}>
                 <SubscriptionInput
                   placeholder="Enter your email address."
                   value={formValue}
                   onChange={changeFormValue}
+                  disabled={formDisabled}
                 />
-                <SubscriptionSubmitButton ariaRole="submit" />
+                <SubscriptionSubmitButton
+                  ariaRole="submit"
+                  disabled={formDisabled}
+                  onClick={e => {
+                    setFormDisabled(true);
+                    e.preventDefault();
+                    SubmitEmail(formValue);
+                  }}
+                />
               </SubscrptionForm>
             </SubscriptionFormContainer>
           </FooterContentBox>

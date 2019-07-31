@@ -7,5 +7,6 @@ module.exports = {
   sportybet: "https://oddscraper.herokuapp.com/api/sportybet",
   nairabet: "https://oddscraper.herokuapp.com/api/nairabet",
   _1960bet: "https://oddscraper.herokuapp.com/api/1960bet",
-  betking: "https://oddscraper.herokuapp.com/api/betking"
+  betking: "https://oddscraper.herokuapp.com/api/betking",
+  mailchimp_url: "https://xyz.us15.list-manage.com/subscribe/post"
 };

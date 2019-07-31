@@ -685,7 +685,8 @@ module.exports = {
   sportybet: "https://oddscraper.herokuapp.com/api/sportybet",
   nairabet: "https://oddscraper.herokuapp.com/api/nairabet",
   _1960bet: "https://oddscraper.herokuapp.com/api/1960bet",
-  betking: "https://oddscraper.herokuapp.com/api/betking"
+  betking: "https://oddscraper.herokuapp.com/api/betking",
+  mailchimp_url: "https://xyz.us15.list-manage.com/subscribe/post"
 };
 
 /***/ }),
@@ -1934,6 +1935,17 @@ module.exports = __webpack_require__(/*! ./dist/client/link */ "./node_modules/n
 
 /***/ }),
 
+/***/ "./node_modules/react-toastify/dist/ReactToastify.css":
+/*!************************************************************!*\
+  !*** ./node_modules/react-toastify/dist/ReactToastify.css ***!
+  \************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+
+
+/***/ }),
+
 /***/ "./pages/index.js":
 /*!************************!*\
   !*** ./pages/index.js ***!
@@ -2429,24 +2441,42 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! rebass */ "rebass");
 /* harmony import */ var rebass__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(rebass__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @/resources/icons/google-plus-logo.svg */ "./src/resources/icons/google-plus-logo.svg");
-/* harmony import */ var _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @/resources/icons/facebook-logo.svg */ "./src/resources/icons/facebook-logo.svg");
-/* harmony import */ var _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @/resources/icons/twitter-logo.svg */ "./src/resources/icons/twitter-logo.svg");
-/* harmony import */ var _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @/resources/icons/instagram-logo.svg */ "./src/resources/icons/instagram-logo.svg");
-/* harmony import */ var _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/resources/icons/send-button.svg */ "./src/resources/icons/send-button.svg");
-/* harmony import */ var _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-toastify */ "react-toastify");
+/* harmony import */ var react_toastify__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_toastify__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-toastify/dist/ReactToastify.css */ "./node_modules/react-toastify/dist/ReactToastify.css");
+/* harmony import */ var react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react_toastify_dist_ReactToastify_css__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! axios */ "axios");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _config_url__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../../config/url */ "./config/url.js");
+/* harmony import */ var _config_url__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_config_url__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @/resources/icons/google-plus-logo.svg */ "./src/resources/icons/google-plus-logo.svg");
+/* harmony import */ var _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @/resources/icons/facebook-logo.svg */ "./src/resources/icons/facebook-logo.svg");
+/* harmony import */ var _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @/resources/icons/twitter-logo.svg */ "./src/resources/icons/twitter-logo.svg");
+/* harmony import */ var _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @/resources/icons/instagram-logo.svg */ "./src/resources/icons/instagram-logo.svg");
+/* harmony import */ var _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @/resources/icons/send-button.svg */ "./src/resources/icons/send-button.svg");
+/* harmony import */ var _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var _resources_icons_send_button_disabled_svg__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @/resources/icons/send-button-disabled.svg */ "./src/resources/icons/send-button-disabled.svg");
+/* harmony import */ var _resources_icons_send_button_disabled_svg__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_resources_icons_send_button_disabled_svg__WEBPACK_IMPORTED_MODULE_14__);
 
-var _jsxFileName = "/Users/iyk/Documents/sandbox/oddschecker-fe-ssr/src/components/footer/components/index.js";
+
+/* eslint-disable no-undef */
+
+/* eslint-disable camelcase */
 
 /* eslint-disable no-nested-ternary */
 
 
 
+
+
+
+
  // Social Media Icons
+
 
 
 
@@ -2549,7 +2579,9 @@ var SubscriptionFormContainer = styled_components__WEBPACK_IMPORTED_MODULE_2___d
 var SubscrptionForm = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.form.withConfig({
   displayName: "components__SubscrptionForm",
   componentId: "sc-2z22kj-10"
-})(["width:100%;display:flex;flex-direction:row;justify-content:center;align-items:center;border-bottom:1px solid rgba(10,10,10,0.35);"]);
+})(["width:100%;display:flex;flex-direction:row;justify-content:center;align-items:center;border-bottom:1px solid rgba(10,10,10,0.35);opacity:", ";"], function (props) {
+  return props.disabled ? "0.6" : "1";
+});
 /**
  * Subscription Input box
  * @component
@@ -2569,7 +2601,9 @@ var SubscriptionInput = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a
 var SubscriptionSubmitButton = styled_components__WEBPACK_IMPORTED_MODULE_2___default.a.button.withConfig({
   displayName: "components__SubscriptionSubmitButton",
   componentId: "sc-2z22kj-12"
-})(["border:none;width:30px;height:15px;background-image:url(", ");background-position:center;background-size:contain;background-repeat:no-repeat;background-color:rgba(0,0,0,0);"], _resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_9___default.a);
+})(["border:none;width:30px;height:15px;background-image:", ";background-position:center;background-size:contain;background-repeat:no-repeat;background-color:rgba(0,0,0,0);"], function (props) {
+  return props.disabled ? "url(".concat(_resources_icons_send_button_disabled_svg__WEBPACK_IMPORTED_MODULE_14___default.a, ")") : "url(".concat(_resources_icons_send_button_svg__WEBPACK_IMPORTED_MODULE_13___default.a, ")");
+});
 /**
  * Component to render Social Media Icon
  * @component
@@ -2584,23 +2618,13 @@ var RenderSocialMediaIcon = function RenderSocialMediaIcon(_ref) {
     target: "_blank",
     href: {
       linkRef: linkRef
-    },
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 162
-    },
-    __self: this
+    }
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIcon, {
     className: "sm-icon",
     alt: {
       altText: altText
     },
-    src: iconSrc,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 163
-    },
-    __self: this
+    src: iconSrc
   }));
 };
 
@@ -2613,7 +2637,9 @@ RenderSocialMediaIcon.propTypes = {
 
   /** The alt text for the image */
   altText: prop_types__WEBPACK_IMPORTED_MODULE_3___default.a.string.isRequired
-};
+}; // Configure out Toast
+
+react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].configure();
 /**
  * Site's footer component.
  */
@@ -2624,192 +2650,148 @@ var Footer = function Footer() {
       formValue = _useState2[0],
       setformValue = _useState2[1];
 
+  var _useState3 = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(false),
+      _useState4 = Object(_babel_runtime_corejs2_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_0__["default"])(_useState3, 2),
+      formDisabled = _useState4[0],
+      setFormDisabled = _useState4[1];
+
   var changeFormValue = function changeFormValue(e) {
+    e.preventDefault();
     setformValue(e.target.value);
   };
+  /**
+   * Submit Email Action
+   * @param email
+   *
+   */
 
-  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 187
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterMainContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 188
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentContainer, {
+
+  var SubmitEmail = function SubmitEmail(email) {
+    setFormDisabled(true);
+    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    var isEmailValid = re.test(String(email).toLowerCase());
+
+    if (!isEmailValid) {
+      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error("Please Provide a Proper Email Address.", {
+        position: react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].POSITION.BOTTOM_LEFT,
+        toastId: "xx-yy"
+      });
+      console.error("An Invalid email was passed");
+      setFormDisabled(false);
+      return null;
+    }
+
+    return MailChimpSubscribe({
+      email: email,
+      mailchimp_url: _config_url__WEBPACK_IMPORTED_MODULE_8__["mailchimp_url"]
+    });
+  };
+  /**
+   * Subscribe to Mailchimp API
+   * @param email
+   */
+
+
+  var MailChimpSubscribe = function MailChimpSubscribe(obj) {
+    var url = process.env.production ? _config_url__WEBPACK_IMPORTED_MODULE_8__["mailchimp_url"] || obj.url : "https://cors-anywhere.herokuapp.com/".concat(_config_url__WEBPACK_IMPORTED_MODULE_8__["mailchimp_url"]) || false;
+    axios__WEBPACK_IMPORTED_MODULE_7___default.a.post(url, {
+      EMAIL: obj.email
+    }, {
+      params: {
+        u: "c698de73a81a67a48a9fa1aad",
+        id: "2f56afe60f"
+      },
+      dataType: "json",
+      contentType: "application/json; charset=utf-8"
+    }).then(function (result) {
+      setFormDisabled(false);
+      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].success("Thanks for Subscribing!", {
+        position: react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].POSITION.BOTTOM_LEFT,
+        toastId: "xx-yy"
+      });
+      return result;
+    }).catch(function (err) {
+      setFormDisabled(false);
+      react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].error("An Error occured while subscribing. Please try again", {
+        position: react_toastify__WEBPACK_IMPORTED_MODULE_5__["toast"].POSITION.BOTTOM_LEFT,
+        toastId: "xx-yy"
+      });
+      console.log(err);
+      return false;
+    });
+  };
+
+  return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterMainContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentContainer, {
     flexDirection: "row",
     width: [1, 1, 0.9, 0.75],
     mx: "auto",
-    flexWrap: "wrap",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 189
-    },
-    __self: this
+    flexWrap: "wrap"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
     className: "logo-text-container",
     width: [1, 6 / 12, 4 / 12, 4 / 12],
     px: ["5px", "10px", "15px", "20px"],
-    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 194
-    },
-    __self: this
+    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"]
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterLogoH2, {
-    className: "footer-logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 199
-    },
-    __self: this
-  }, "Oddschecker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterSubtextP, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 200
-    },
-    __self: this
-  }, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
+    className: "footer-logo"
+  }, "Oddschecker"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterSubtextP, null, "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis.")), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
     className: "social-media-icons-container",
     width: [1, 6 / 12, 4 / 12, 3 / 12],
     px: ["5px", "10px", "15px", "20px"],
-    mb: ["3rem", "0.5rem", "0.5rem", "0rem"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 207
-    },
-    __self: this
+    mb: ["3rem", "0.5rem", "0.5rem", "0rem"]
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterLogoH2, {
-    className: "footer-logo",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 212
-    },
-    __self: this
+    className: "footer-logo"
   }, "Follow Us"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsContainer, {
-    flexDirection: "row",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 213
-    },
-    __self: this
+    flexDirection: "row"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 214
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "google.com",
-    iconSrc: _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_5___default.a,
-    altText: "google plus icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 215
-    },
-    __self: this
+    iconSrc: _resources_icons_google_plus_logo_svg__WEBPACK_IMPORTED_MODULE_9___default.a,
+    altText: "google plus icon"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 222
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "twitter.com",
-    iconSrc: _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_7___default.a,
-    altText: "twitter icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 223
-    },
-    __self: this
+    iconSrc: _resources_icons_twitter_logo_svg__WEBPACK_IMPORTED_MODULE_11___default.a,
+    altText: "twitter icon"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 230
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "facebook.com",
-    iconSrc: _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_6___default.a,
-    altText: "facebook icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 231
-    },
-    __self: this
+    iconSrc: _resources_icons_facebook_logo_svg__WEBPACK_IMPORTED_MODULE_10___default.a,
+    altText: "facebook icon"
   })), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SocialMediaIconsWrapper, {
     width: [3 / 12],
-    mr: "5px",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 238
-    },
-    __self: this
+    mr: "5px"
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(RenderSocialMediaIcon, {
     linkRef: "instagram.com",
-    iconSrc: _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_8___default.a,
-    altText: "instagram icon",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 239
-    },
-    __self: this
+    iconSrc: _resources_icons_instagram_logo_svg__WEBPACK_IMPORTED_MODULE_12___default.a,
+    altText: "instagram icon"
   })))), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterContentBox, {
     className: "logo-text-container",
     width: [1, 1, 4 / 12, 4 / 12],
     px: ["2.5px", "2.5px", "5px", "5px"],
-    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"],
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 248
-    },
-    __self: this
+    mb: ["1.5rem", "0.5rem", "0.5rem", "0rem"]
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(FooterLogoH2, {
-    className: "footer-logo subscribe-heading",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 253
-    },
-    __self: this
-  }, "Subscribe and stay tuned"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionFormContainer, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 256
-    },
-    __self: this
-  }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscrptionForm, {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 257
-    },
-    __self: this
+    className: "footer-logo subscribe-heading"
+  }, "Subscribe and stay tuned"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionFormContainer, null, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscrptionForm, {
+    disabled: formDisabled
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionInput, {
     placeholder: "Enter your email address.",
     value: formValue,
     onChange: changeFormValue,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 258
-    },
-    __self: this
+    disabled: formDisabled
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(SubscriptionSubmitButton, {
     ariaRole: "submit",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 263
-    },
-    __self: this
+    disabled: formDisabled,
+    onClick: function onClick(e) {
+      setFormDisabled(true);
+      e.preventDefault();
+      SubmitEmail(formValue);
+    }
   })))))));
 };
 
@@ -5561,6 +5543,17 @@ module.exports = "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGlu
 
 /***/ }),
 
+/***/ "./src/resources/icons/send-button-disabled.svg":
+/*!******************************************************!*\
+  !*** ./src/resources/icons/send-button-disabled.svg ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MzUuNSIgaGVpZ2h0PSI0NTkiIHZpZXdCb3g9IjAgMCA1MzUuNSA0NTkiPgogIDxnIGlkPSJzZW5kLWJ1dHRvbiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAtMzguMjUpIj4KICAgIDxnIGlkPSJzZW5kIj4KICAgICAgPHBhdGggaWQ9IlBhdGhfMjc0OSIgZGF0YS1uYW1lPSJQYXRoIDI3NDkiIGQ9Ik0wLDQ5Ny4yNWw1MzUuNS0yMjkuNUwwLDM4LjI1djE3OC41bDM4Mi41LDUxTDAsMzE4Ljc1WiIgZmlsbD0iIzk4OTg5OCIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg=="
+
+/***/ }),
+
 /***/ "./src/resources/icons/send-button.svg":
 /*!*********************************************!*\
   !*** ./src/resources/icons/send-button.svg ***!
@@ -5944,6 +5937,17 @@ module.exports = require("react-simple-dropdown");
 /***/ (function(module, exports) {
 
 module.exports = require("react-table");
+
+/***/ }),
+
+/***/ "react-toastify":
+/*!*********************************!*\
+  !*** external "react-toastify" ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = require("react-toastify");
 
 /***/ }),
 
